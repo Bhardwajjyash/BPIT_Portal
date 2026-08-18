@@ -1,0 +1,249 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+
+}
+
+enum VerificationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+// ----------------------------------------
+// 1. FACULTY / MENTOR MODEL
+// ----------------------------------------
+model Faculty {
+  id             String          @id @default(uuid())
+  email          String          @unique
+  passwordHash   String
+  name           String
+  designation    String?         // e.g., Assistant Professor
+  department     String? 
+  profilePic     String?        // e.g., IT
+  
+  // The students assigned to this mentor
+  students       Student[]     
+  
+  // Audit log of what they verified
+  verifiedItems  VerifiedLog[] 
+}
+
+// ----------------------------------------
+// 2. STUDENT MODEL
+// ----------------------------------------
+model Student {
+  id               String   @id @default(uuid())
+  email            String   @unique
+  passwordHash     String
+  enrollmentNo     String?  @unique
+  name             String
+  batch            String?  // e.g., 2023-27
+  section          String?  // e.g., A
+  semester         Int?
+  parentName       String?
+  address          String?
+  profilePic       String?
+
+  // Mentor-Mentee Relationship
+  mentorId         String?
+  mentor           Faculty? @relation(fields: [mentorId], references: [id])
+
+  // Relations to Achievements
+  extraCurriculars ExtraCurricular[]
+  coCurriculars    CoCurricular[]
+  certifications   Certification[]
+  projects         Project[]
+  researchPapers   ResearchPaper[]
+}
+
+// ----------------------------------------
+// 3. ACHIEVEMENT MODELS
+// ----------------------------------------
+
+model ExtraCurricular {
+  id              String   @id @default(uuid())
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id])
+  semester        Int
+  type            String   // NSS, NCC, Cultural, Sports, etc.
+  mode            String   // Online, Offline, Hybrid
+  title           String
+  organizedBy     String
+  place           String
+  level           String   // College, University, State, National, Intl
+  dateFrom        DateTime
+  dateTo          DateTime
+  duration        String   // e.g., "4 hours"
+  teamMembers     String?
+  role            String   // Organizer, Participant, Winner
+  position        String?
+  prizeMoney      String?
+  learnings       String   // Max 50 words
+  sponsored       String?
+  rejectionReason String? 
+  // File Uploads
+  proofUrl        String   // Link to uploaded PDF/Image (Required)
+  photoUrl        String?  // Link to uploaded Event Photo (Optional)
+  
+  status          VerificationStatus @default(PENDING)
+  verifiedLogs    VerifiedLog[]
+}
+
+model CoCurricular {
+  id              String   @id @default(uuid())
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id])
+  semester        Int
+  type            String   // Hackathon, Ideathon, Quiz, Coding
+  mode            String
+  title           String
+  organizedBy     String
+  place           String
+  level           String
+  dateFrom        DateTime
+  dateTo          DateTime
+  duration        String?
+  teamMembers     String?
+  role            String
+  position        String?
+  prizeMoney      String?
+  learnings       String
+  sponsored       String? 
+  rejectionReason String?
+  
+  // File Uploads
+  proofUrl        String   // Required
+  photoUrl        String?  // Optional Event Photo
+  
+  status          VerificationStatus @default(PENDING)
+  verifiedLogs    VerifiedLog[]
+}
+
+model Certification {
+  id              String   @id @default(uuid())
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id])
+  semester        Int
+  courseName      String
+  mode            String
+  organizedBy     String
+  certifiedBy     String
+  dateFrom        DateTime
+  dateTo          DateTime
+  duration        String
+  maxMarksGrade   String?
+  marksObtained   String?
+  position        String? 
+  learnings       String
+  sponsored       String?
+  rejectionReason String?
+  
+  // File Uploads
+  proofUrl        String   // Required Certificate
+  photoUrl        String?  // Optional Photo
+  
+  status          VerificationStatus @default(PENDING)
+  verifiedLogs    VerifiedLog[]
+}
+
+model Project {
+  id              String   @id @default(uuid())
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id])
+  semester        Int
+  projectName     String
+  supervisor      String?
+  type            String   // Web Dev, Mobile App, Research
+  description     String
+  techStack       String   // Comma separated string from your interactive tags
+  githubLink      String?  // Added from your recent frontend update
+  dateFrom        DateTime
+  dateTo          DateTime
+  teamMembers     String?
+  projectStatus   String   // Live / Working / Deployed
+  achievements    String? 
+  learnings       String
+  rejectionReason String? 
+  
+  // File Uploads
+  proofUrl        String   // Required 
+  photoUrl        String?  // Optional Photo
+  
+  status          VerificationStatus @default(PENDING)
+  verifiedLogs    VerifiedLog[]
+}
+
+model ResearchPaper {
+  id              String   @id @default(uuid())
+  studentId       String
+  student         Student  @relation(fields: [studentId], references: [id])
+  semester        Int
+  title           String
+  authors         String
+  supervisor      String?
+  type            String   // Journal, Book Chapter, Conference
+  journalName     String
+  publishedBy     String
+  monthYear       String
+  volumeIssue     String?
+  doiUrl          String?
+  indexing        String?  // SCI, SCIE, Scopus
+  paperStatus     String   // Published, Presented, Accepted
+  learnings       String
+  organization    String?
+  achievements    String? 
+  rejectionReason String?
+  
+  // File Uploads
+  proofUrl        String?  // Optional/Required based on your logic
+  photoUrl        String?  // Optional Event/Paper Photo
+  
+  status          VerificationStatus @default(PENDING)
+  verifiedLogs    VerifiedLog[]
+}
+
+// ----------------------------------------
+// 4. VERIFICATION AUDIT LOG
+// ----------------------------------------
+model VerifiedLog {
+  id                 String   @id @default(uuid())
+  facultyId          String
+  faculty            Faculty  @relation(fields: [facultyId], references: [id])
+  statusGiven        VerificationStatus
+  remarks            String?
+  verifiedAt         DateTime @default(now())
+
+  // Optional relations to whichever item was verified
+  extraCurricularId  String?
+  extraCurricular    ExtraCurricular? @relation(fields: [extraCurricularId], references: [id])
+  
+  coCurricularId     String?
+  coCurricular       CoCurricular?    @relation(fields: [coCurricularId], references: [id])
+  
+  certificationId    String?
+  certification      Certification?   @relation(fields: [certificationId], references: [id])
+  
+  projectId          String?
+  project            Project?         @relation(fields: [projectId], references: [id])
+  
+  researchPaperId    String?
+  researchPaper      ResearchPaper?   @relation(fields: [researchPaperId], references: [id])
+}
+
+// ----------------------------------------
+// 5. ADMIN / HOD MODEL
+// ----------------------------------------
+model Admin {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         String   @default("HOD") // e.g., Head of Department
+  department   String?  // e.g., IT
+  profilePic   String?
+  createdAt    DateTime @default(now())
+}
