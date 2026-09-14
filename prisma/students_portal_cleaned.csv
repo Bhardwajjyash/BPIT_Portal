@@ -1,0 +1,569 @@
+id,email,passwordHash,enrollmentNo,name,batch,section,department
+120802723,arnav.anand@bpitindia.edu.in,MRITUNJAY KUMAR ANAND,120802723,Arnav Anand,2023-2027,A,Computer Science & Engineering
+220802723,archit.singhal@bpitindia.edu.in,MADRESH SINGHAL,220802723,Archit Singhal,2023-2027,A,Computer Science & Engineering
+320802723,archit.bharti@bpitindia.edu.in,SANJEEV KUMAR BHARTI,320802723,Archit Bharti,2023-2027,A,Computer Science & Engineering
+420802723,siddhant.jugran@bpitindia.edu.in,OM PRAKASH JUGRAN,420802723,Siddhant Jugran,2023-2027,A,Computer Science & Engineering
+520802723,vansh.jain@bpitindia.edu.in,SANJEEV JAIN,520802723,Vansh Jain,2023-2027,A,Computer Science & Engineering
+620802723,swayam.chawla@bpitindia.edu.in,ANIL KUMAR CHAWLA,620802723,Swayam Chawla,2023-2027,A,Computer Science & Engineering
+720802723,govind.shreelochan@bpitindia.edu.in,SANDESH SHARMA,720802723,Govind Shreelochan,2023-2027,A,Computer Science & Engineering
+820802723,aarav.mahajan@bpitindia.edu.in,SANJEEV KUMAR GUPTA,820802723,Aarav Mahajan,2023-2027,A,Computer Science & Engineering
+920802723,daksh.tyagi@bpitindia.edu.in,VIKAS TYAGI,920802723,Daksh Tyagi,2023-2027,A,Computer Science & Engineering
+1020802723,purab@bpitindia.edu.in,DHARMENDER,1020802723,Purab,2023-2027,A,Computer Science & Engineering
+1120802723,kunal.sharma@bpitindia.edu.in,ARUN KUMAR SHRAM,1120802723,Kunal Sharma,2023-2027,A,Computer Science & Engineering
+1220802723,sahil.agrawal@bpitindia.edu.in,AMIT AGRAWAL,1220802723,Sahil Agrawal,2023-2027,A,Computer Science & Engineering
+1320802723,aaditya.rana@bpitindia.edu.in,ATUL RANA,1320802723,Aaditya Rana,2023-2027,A,Computer Science & Engineering
+1420802723,swapnil.dixit@bpitindia.edu.in,ATUL KUMAR DIXIT,1420802723,Swapnil Dixit,2023-2027,A,Computer Science & Engineering
+1520802723,ritesh.chauhan@bpitindia.edu.in,HIMMAT SINGH,1520802723,Ritesh Chauhan,2023-2027,A,Computer Science & Engineering
+1620802723,jeevantika.tejan@bpitindia.edu.in,OM SINGH TEJAN,1620802723,Jeevantika Tejan,2023-2027,A,Computer Science & Engineering
+1720802723,abhas.sharma@bpitindia.edu.in,UPKAR SHARMA,1720802723,Abhas Sharma,2023-2027,A,Computer Science & Engineering
+1820802723,shubham.khandelwal@bpitindia.edu.in,SHYAM KHANDELWAL,1820802723,Shubham Khandelwal,2023-2027,A,Computer Science & Engineering
+1920802723,tanishq.bhadula@bpitindia.edu.in,MAHANAND BHADULA,1920802723,Tanishq Bhadula,2023-2027,A,Computer Science & Engineering
+2020802723,devang.singh@bpitindia.edu.in,DUSHYANT KUMAR,2020802723,Devang Singh,2023-2027,A,Computer Science & Engineering
+2120802723,radhika.arora@bpitindia.edu.in,RAJNISH ARORA,2120802723,Radhika Arora,2023-2027,A,Computer Science & Engineering
+2220802723,rhythem.sabharwal@bpitindia.edu.in,KUNAL,2220802723,Rhythem Sabharwal,2023-2027,A,Computer Science & Engineering
+2320802723,sanchi.arora@bpitindia.edu.in,RAJEEV ARORA,2320802723,Sanchi Arora,2023-2027,A,Computer Science & Engineering
+2420802723,devesh.sharma@bpitindia.edu.in,NARESH KUMAR SHARMA,2420802723,Devesh Sharma,2023-2027,A,Computer Science & Engineering
+2520802723,ashmit.jain@bpitindia.edu.in,SACHIN JAIN,2520802723,Ashmit Jain,2023-2027,A,Computer Science & Engineering
+2620802723,vishesh.bhatia@bpitindia.edu.in,AMAR BHATIA,2620802723,Vishesh Bhatia,2023-2027,A,Computer Science & Engineering
+2720802723,sanya.modi@bpitindia.edu.in,MANISH MODI,2720802723,Sanya Modi,2023-2027,A,Computer Science & Engineering
+2820802723,aditya.sharma@bpitindia.edu.in,DINESH RAJ,2820802723,Aditya Sharma,2023-2027,A,Computer Science & Engineering
+2920802723,aditya.prakash@bpitindia.edu.in,OM PRAKASH,2920802723,Aditya Prakash,2023-2027,A,Computer Science & Engineering
+3020802723,shubham.raj@bpitindia.edu.in,SUNIL KUMAR,3020802723,Shubham Raj,2023-2027,A,Computer Science & Engineering
+3120802723,kabir.solanki@bpitindia.edu.in,DEVENDER KUMAR,3120802723,Kabir Solanki,2023-2027,A,Computer Science & Engineering
+3220802723,pushkar.gupta@bpitindia.edu.in,VIJAY GUPTA,3220802723,Pushkar Gupta,2023-2027,A,Computer Science & Engineering
+3320802723,jitin.kumar@bpitindia.edu.in,PANKAJ KUMAR,3320802723,Jitin Kumar,2023-2027,A,Computer Science & Engineering
+3420802723,bhumi.gupta@bpitindia.edu.in,VIKAS GUPTA,3420802723,Bhumi Gupta,2023-2027,A,Computer Science & Engineering
+3520802723,aman@bpitindia.edu.in,NAVEEN,3520802723,Aman,2023-2027,A,Computer Science & Engineering
+3620802723,tarun.kansal@bpitindia.edu.in,RAJENDER KUMAR,3620802723,Tarun Kansal,2023-2027,A,Computer Science & Engineering
+3720802723,kanchan@bpitindia.edu.in,BASUDEV,3720802723,Kanchan,2023-2027,A,Computer Science & Engineering
+3820802723,shambhavi.mishra@bpitindia.edu.in,SUNIL KUMAR MISHRA,3820802723,Shambhavi Mishra,2023-2027,A,Computer Science & Engineering
+3920802723,apoorva.gupta@bpitindia.edu.in,ASHWANI KUMAR GUPTA,3920802723,Apoorva Gupta,2023-2027,A,Computer Science & Engineering
+4020802723,jayant.mishra@bpitindia.edu.in,MOHAN DATT,4020802723,Jayant Mohan Mishra,2023-2027,A,Computer Science & Engineering
+4120802723,jayant.kumar@bpitindia.edu.in,ASHWANI KUMAR,4120802723,Jayant Kumar,2023-2027,A,Computer Science & Engineering
+4220802723,gagan@bpitindia.edu.in,DEEP CHAND,4220802723,Gagan,2023-2027,A,Computer Science & Engineering
+35120802723,sangya.ojha@bpitindia.edu.in,SHAILENDRA OJHA,35120802723,Sangya Ojha,2023-2027,A,Computer Science & Engineering
+35220802723,kanav.kapoor@bpitindia.edu.in,AKASH KAPOOR,35220802723,Kanav Kapoor,2023-2027,A,Computer Science & Engineering
+35320802723,abhinav.bhardwaj@bpitindia.edu.in,ATUL KUMAR,35320802723,Abhinav Bhardwaj,2023-2027,A,Computer Science & Engineering
+35420802723,kartik.dalal@bpitindia.edu.in,RAVINDER SINGH,35420802723,Kartik Dalal,2023-2027,A,Computer Science & Engineering
+35520802723,harsh.kumar@bpitindia.edu.in,PARVEEN KUMAR,35520802723,Harsh Kumar,2023-2027,A,Computer Science & Engineering
+35620802723,keshav.agarwal@bpitindia.edu.in,VIKAS AGARWAL,35620802723,Keshav Agarwal,2023-2027,A,Computer Science & Engineering
+35720802723,parth.sharma@bpitindia.edu.in,N.K. SHARMA,35720802723,Parth Sharma,2023-2027,A,Computer Science & Engineering
+35820802723,parth.khera@bpitindia.edu.in,SUSHIL KHERA,35820802723,Parth Khera,2023-2027,A,Computer Science & Engineering
+35920802723,mokshit.kaushik@bpitindia.edu.in,RAJEEV SHARMA,35920802723,Mokshit Kaushik,2023-2027,A,Computer Science & Engineering
+36020802723,disha@bpitindia.edu.in,LALIT KUMAR,36020802723,Disha,2023-2027,A,Computer Science & Engineering
+36120802723,kanishka.sharma@bpitindia.edu.in,PARSHAN SHARMA,36120802723,Kanishka Sharma,2023-2027,A,Computer Science & Engineering
+36220802723,yash.kaushik@bpitindia.edu.in,ANIL DUTT KAUSHIK,36220802723,Yash Kaushik,2023-2027,A,Computer Science & Engineering
+36320802723,sumukhi.tripathi@bpitindia.edu.in,PRIYADARSHAN TRIPATHI,36320802723,Sumukhi Tripathi,2023-2027,A,Computer Science & Engineering
+36420802723,naveen.gupta@bpitindia.edu.in,PREM CHAND GUPTA,36420802723,Naveen Gupta,2023-2027,A,Computer Science & Engineering
+36520802723,trisha.agarwal@bpitindia.edu.in,SHYAM SUNDAR AGARWAL,36520802723,Trisha Agarwal,2023-2027,A,Computer Science & Engineering
+36620802723,aashi.goel@bpitindia.edu.in,ANOOP GOEL,36620802723,Aashi Goel,2023-2027,A,Computer Science & Engineering
+36720802723,dhruv.sharma@bpitindia.edu.in,DEVRAJ SHARMA,36720802723,Dhruv Sharma,2023-2027,A,Computer Science & Engineering
+36820802723,kushagra.behl@bpitindia.edu.in,GAGAN BEHL,36820802723,Kushagra Behl,2023-2027,A,Computer Science & Engineering
+4320802723,lakshita.raj@bpitindia.edu.in,LT. SIDDHARTH RAJ,4320802723,Lakshita Raj,2023-2027,B,Computer Science & Engineering
+4420802723,akshat.goyal@bpitindia.edu.in,ASHOK KUMAR JAIN,4420802723,Akshat Goyal,2023-2027,B,Computer Science & Engineering
+4520802723,shreya.aggarwal@bpitindia.edu.in,SUSHIL KUMAR,4520802723,Shreya Aggarwal,2023-2027,B,Computer Science & Engineering
+4620802723,manan.gupta@bpitindia.edu.in,DEEPAK GUPTA,4620802723,Manan Gupta,2023-2027,B,Computer Science & Engineering
+4720802723,hardik.arora@bpitindia.edu.in,AMIT KUMAR,4720802723,Hardik Arora,2023-2027,B,Computer Science & Engineering
+4820802723,moksh.malik@bpitindia.edu.in,SANJAY MALIK,4820802723,Moksh Malik,2023-2027,B,Computer Science & Engineering
+4920802723,kshitiz.kumar@bpitindia.edu.in,SONVIR SINGH,4920802723,Kshitiz Kumar,2023-2027,B,Computer Science & Engineering
+5020802723,arkish.gupta@bpitindia.edu.in,SANJAY KUMAR,5020802723,Arkish Gupta,2023-2027,B,Computer Science & Engineering
+5120802723,lavanya.varshney@bpitindia.edu.in,MAYANK MOHAN VARSHNEY,5120802723,Lavanya Varshney,2023-2027,B,Computer Science & Engineering
+5220802723,ayush.pandey@bpitindia.edu.in,CHANDER PRAKASH PANDEY,5220802723,Ayush Pandey,2023-2027,B,Computer Science & Engineering
+5320802723,krishna.jain@bpitindia.edu.in,PRAVEEN KUMAR JAIN,5320802723,Krishna Jain,2023-2027,B,Computer Science & Engineering
+5420802723,yuvraj.singh@bpitindia.edu.in,KIRPAL SINGH CHAUHAN,5420802723,Yuvraj Singh,2023-2027,B,Computer Science & Engineering
+5520802723,himanshu.dudeja@bpitindia.edu.in,DEEPAK DUDEJA,5520802723,Himanshu Dudeja,2023-2027,B,Computer Science & Engineering
+5620802723,pranjal.singh@bpitindia.edu.in,SANJAY KUMAR SINGH,5620802723,Pranjal Singh,2023-2027,B,Computer Science & Engineering
+5720802723,srishti.singhal@bpitindia.edu.in,NARENDER KUMAR,5720802723,Srishti Singhal,2023-2027,B,Computer Science & Engineering
+5820802723,piyush.fuloriya@bpitindia.edu.in,SURESH CHANDRA FULORIYA,5820802723,Piyush Fuloriya,2023-2027,B,Computer Science & Engineering
+5920802723,shivam.khanna@bpitindia.edu.in,SANJAY KHANNA,5920802723,Shivam Khanna,2023-2027,B,Computer Science & Engineering
+6020802723,aditya@bpitindia.edu.in,GAJENDER SHARMA,6020802723,Aditya,2023-2027,B,Computer Science & Engineering
+6120802723,sarthak.jain@bpitindia.edu.in,RAJ KUMAR JAIN,6120802723,Sarthak Jain,2023-2027,B,Computer Science & Engineering
+6220802723,kushal@bpitindia.edu.in,YOGESH KUMAR,6220802723,Kushal,2023-2027,B,Computer Science & Engineering
+6320802723,anshika.prajapati@bpitindia.edu.in,SHAILESH KUMAR PRAJAPATI,6320802723,Anshika Prajapati,2023-2027,B,Computer Science & Engineering
+6420802723,manmeet.kaur@bpitindia.edu.in,GURAJMER SINGH,6420802723,Manmeet Kaur,2023-2027,B,Computer Science & Engineering
+6520802723,vansh.ahuja@bpitindia.edu.in,BHARAT BHUSHAN,6520802723,Vansh Ahuja,2023-2027,B,Computer Science & Engineering
+6620802723,gaurav@bpitindia.edu.in,VIRENDER SINGH,6620802723,Gaurav,2023-2027,B,Computer Science & Engineering
+6720802723,kunal@bpitindia.edu.in,ASHOK KUMAR,6720802723,Kunal,2023-2027,B,Computer Science & Engineering
+6820802723,simran.kapoor@bpitindia.edu.in,ANAND KAPOOR,6820802723,Simran Kapoor,2023-2027,B,Computer Science & Engineering
+6920802723,avni.bhasin@bpitindia.edu.in,AMIT BHASIN,6920802723,Avni Bhasin,2023-2027,B,Computer Science & Engineering
+7020802723,archana.mahto@bpitindia.edu.in,DEV MANGAL MAHTO,7020802723,Archana Mahto,2023-2027,B,Computer Science & Engineering
+7120802723,akanxi.kushwaha@bpitindia.edu.in,RAVINDRA KUMAR KUSHWAHA,7120802723,Akanxi Kushwaha,2023-2027,B,Computer Science & Engineering
+7220802723,manasvi.goyal@bpitindia.edu.in,ANKUR GOYAL,7220802723,Manasvi Goyal,2023-2027,B,Computer Science & Engineering
+7320802723,vishesh.bhatia2@bpitindia.edu.in,NAVEEN BHATIA,7320802723,Vishesh Bhatia,2023-2027,B,Computer Science & Engineering
+7420802723,sanket.kumar@bpitindia.edu.in,NAVEEN KUMAR,7420802723,Sanket Kumar,2023-2027,B,Computer Science & Engineering
+7520802723,arpita.guniyal@bpitindia.edu.in,VIJAY PRAKASH,7520802723,Arpita Guniyal,2023-2027,B,Computer Science & Engineering
+7620802723,lakshay.joshi@bpitindia.edu.in,SANJAY KUMAR JOSHI,7620802723,Lakshay Joshi,2023-2027,B,Computer Science & Engineering
+7720802723,nikhil.upadhyay@bpitindia.edu.in,UMESH KUMAR UPADHYAY,7720802723,Nikhil Upadhyay,2023-2027,B,Computer Science & Engineering
+7820802723,pulkit.arora@bpitindia.edu.in,PAWAN KUMAR,7820802723,Pulkit Arora,2023-2027,B,Computer Science & Engineering
+7920802723,kartik.ingle@bpitindia.edu.in,PURSHOTTAM INGLE,7920802723,Kartik Ingle,2023-2027,B,Computer Science & Engineering
+8020802723,shashank.singh@bpitindia.edu.in,OM PRAKASH SINGH,8020802723,Shashank Kumar Singh,2023-2027,B,Computer Science & Engineering
+8120802723,kusha.sharma@bpitindia.edu.in,ARVIND KUMAR SHARMA,8120802723,Kusha Sharma,2023-2027,B,Computer Science & Engineering
+8220802723,vidhatri.nautiyal@bpitindia.edu.in,AJAY NAUTIYAL,8220802723,Vidhatri Nautiyal,2023-2027,B,Computer Science & Engineering
+8320802723,shivam.mahar@bpitindia.edu.in,AJAY SINGH,8320802723,Shivam Singh Mahar,2023-2027,B,Computer Science & Engineering
+8420802723,bhumika.maheshwari@bpitindia.edu.in,ANUJ MAHESHWARI,8420802723,Bhumika Maheshwari,2023-2027,B,Computer Science & Engineering
+8520802723,krish.sharma@bpitindia.edu.in,RAJESH KUMAR,8520802723,Krish Sharma,2023-2027,B,Computer Science & Engineering
+8620802723,raghav.tripathi@bpitindia.edu.in,ANIL TRIPATHI,8620802723,Raghav Tripathi,2023-2027,B,Computer Science & Engineering
+8720802723,harshwardhan.singh@bpitindia.edu.in,HARBEER SINGH,8720802723,Harshwardhan Singh,2023-2027,B,Computer Science & Engineering
+8820802723,hitarth.singaria@bpitindia.edu.in,MANOJ KUMAR,8820802723,Hitarth Singaria,2023-2027,B,Computer Science & Engineering
+8920802723,harsh.chhabra@bpitindia.edu.in,RAJESH CHHABRA,8920802723,Harsh Chhabra,2023-2027,B,Computer Science & Engineering
+9020802723,deepansh.dutta@bpitindia.edu.in,MAHESH KUMAR DUTTA,9020802723,Deepansh Dutta,2023-2027,B,Computer Science & Engineering
+9120802723,rishika.verma@bpitindia.edu.in,BHARAT VERMA,9120802723,Rishika Verma,2023-2027,B,Computer Science & Engineering
+9220802723,lakshay@bpitindia.edu.in,VIRENDER SINGH,9220802723,Lakshay,2023-2027,B,Computer Science & Engineering
+9320802723,md.siddiqui@bpitindia.edu.in,MD HASNAIN,9320802723,Md Sadain Siddiqui,2023-2027,B,Computer Science & Engineering
+9420802723,anubhav.singh@bpitindia.edu.in,SARDAR SINGH,9420802723,Anubhav Singh,2023-2027,B,Computer Science & Engineering
+9520802723,ayush.tiwari@bpitindia.edu.in,KRISHNA KUMAR TIWARI,9520802723,Ayush Tiwari,2023-2027,B,Computer Science & Engineering
+9620802723,piyush.kumar@bpitindia.edu.in,KAILASH CHAND,9620802723,Piyush Kumar,2023-2027,B,Computer Science & Engineering
+9720802723,priyanshu@bpitindia.edu.in,CHANDAN SINGH,9720802723,Priyanshu,2023-2027,B,Computer Science & Engineering
+9820802723,aryan.sharma@bpitindia.edu.in,PARDEEP KUMAR,9820802723,Aryan Sharma,2023-2027,B,Computer Science & Engineering
+9920802723,avikshit.trivedi@bpitindia.edu.in,S L TRIVEDI,9920802723,Avikshit Trivedi,2023-2027,B,Computer Science & Engineering
+10020802723,veenit.kumar@bpitindia.edu.in,BALRAM PRASAD,10020802723,Veenit Kumar,2023-2027,B,Computer Science & Engineering
+10120802723,deepika@bpitindia.edu.in,SURENDER SINGH,10120802723,Deepika,2023-2027,B,Computer Science & Engineering
+10220802723,abhay@bpitindia.edu.in,RAJINDER SHARMA,10220802723,Abhay,2023-2027,B,Computer Science & Engineering
+10320802723,devang.varshney@bpitindia.edu.in,DINESH KUMAR VARSHNEY,10320802723,Devang Varshney,2023-2027,C,Computer Science & Engineering
+10420802723,ankur.deep@bpitindia.edu.in,AMAN DEEP,10420802723,Ankur Deep,2023-2027,C,Computer Science & Engineering
+10520802723,preet@bpitindia.edu.in,ALAKH DEO PRASAD,10520802723,Preet,2023-2027,C,Computer Science & Engineering
+10620802723,anup.thakur@bpitindia.edu.in,DHRUV KUMAR THAKUR,10620802723,Anup Kumar Thakur,2023-2027,C,Computer Science & Engineering
+10720802723,sanyam.antil@bpitindia.edu.in,JOGINDER,10720802723,Sanyam Antil,2023-2027,C,Computer Science & Engineering
+10820802723,sahil.kumar@bpitindia.edu.in,HARIBILAS,10820802723,Sahil Kumar,2023-2027,C,Computer Science & Engineering
+10920802723,drishti.goel@bpitindia.edu.in,ANUJ PRAKASH GOEL,10920802723,Drishti Goel,2023-2027,C,Computer Science & Engineering
+11020802723,prachi@bpitindia.edu.in,PURAN SINGH RAWAT,11020802723,Prachi,2023-2027,C,Computer Science & Engineering
+11120802723,harshit.khandelwal@bpitindia.edu.in,SHYAM SUNDER,11120802723,Harshit Khandelwal,2023-2027,C,Computer Science & Engineering
+11220802723,rishi.mishra@bpitindia.edu.in,ANIL MISHRA,11220802723,Rishi Mishra,2023-2027,C,Computer Science & Engineering
+11320802723,vansh.angra@bpitindia.edu.in,AJAY KUMAR,11320802723,Vansh Angra,2023-2027,C,Computer Science & Engineering
+11420802723,rishi.pawar@bpitindia.edu.in,RAJPAL,11420802723,Rishi Pawar,2023-2027,C,Computer Science & Engineering
+11520802723,lakshay.mittal@bpitindia.edu.in,MUKESH MITTAL,11520802723,Lakshay Mittal,2023-2027,C,Computer Science & Engineering
+11620802723,ajay.kumar@bpitindia.edu.in,NANAK RAM,11620802723,Ajay Kumar,2023-2027,C,Computer Science & Engineering
+11720802723,karishma@bpitindia.edu.in,SHIVRAJ SINGH,11720802723,Karishma,2023-2027,C,Computer Science & Engineering
+11820802723,anshul.joshi@bpitindia.edu.in,BHUWAN CHANDER,11820802723,Anshul Joshi,2023-2027,C,Computer Science & Engineering
+11920802723,sarvesh.malhotra@bpitindia.edu.in,RAM SAMUJH GAUTAM,11920802723,Sarvesh Malhotra,2023-2027,C,Computer Science & Engineering
+12020802723,aaditya.pratap@bpitindia.edu.in,MANOJ KUMAR,12020802723,Aaditya Pratap,2023-2027,C,Computer Science & Engineering
+12120802723,faisal.khan@bpitindia.edu.in,MOHD AYUB,12120802723,Faisal Khan,2023-2027,C,Computer Science & Engineering
+12220802723,shivansh.kumar@bpitindia.edu.in,SANDEEP KUMAR,12220802723,Shivansh Kumar,2023-2027,C,Computer Science & Engineering
+12320802723,harjot.singh@bpitindia.edu.in,HARJEET SINGH,12320802723,Harjot Singh,2023-2027,C,Computer Science & Engineering
+12420802723,jannat.garg@bpitindia.edu.in,DEEPAK GARG,12420802723,Jannat Garg,2023-2027,C,Computer Science & Engineering
+12520802723,kavya.gaur@bpitindia.edu.in,RAJEEV SHARMA,12520802723,Kavya Gaur,2023-2027,C,Computer Science & Engineering
+12620802723,karnita.saumya@bpitindia.edu.in,KARNA SINGH,12620802723,Karnita Saumya,2023-2027,C,Computer Science & Engineering
+12720802723,khushi@bpitindia.edu.in,AJIT KUMAR CHOUDHARY,12720802723,Khushi,2023-2027,C,Computer Science & Engineering
+12820802723,aanya.gautam@bpitindia.edu.in,DINESH SINGH,12820802723,Aanya Gautam,2023-2027,C,Computer Science & Engineering
+12920802723,himanshu@bpitindia.edu.in,ROOP SINGH,12920802723,Himanshu,2023-2027,C,Computer Science & Engineering
+13020802723,utkarsh.vashist@bpitindia.edu.in,ASHWANI KUMAR,13020802723,Utkarsh Vashist,2023-2027,C,Computer Science & Engineering
+13120802723,aman.vashisath@bpitindia.edu.in,BANBARI LAL SHARMA,13120802723,Aman Vashisath,2023-2027,C,Computer Science & Engineering
+13220802723,shubham.singh@bpitindia.edu.in,RAM BABU SINGH,13220802723,Shubham Singh,2023-2027,C,Computer Science & Engineering
+13320802723,sarvagya.bajpai@bpitindia.edu.in,SHARDENDU BAJPAI,13320802723,Sarvagya Bajpai,2023-2027,C,Computer Science & Engineering
+13420802723,sahil@bpitindia.edu.in,MINTU KUMAR MANOJ,13420802723,Sahil,2023-2027,C,Computer Science & Engineering
+13520802723,dipesh.lohchab@bpitindia.edu.in,PARMOD KUMAR,13520802723,Dipesh Lohchab,2023-2027,C,Computer Science & Engineering
+13620802723,satyajit.sahoo@bpitindia.edu.in,SAROJ KANTA SAHOO,13620802723,Satyajit Sahoo,2023-2027,C,Computer Science & Engineering
+13720802723,prashant.mishra@bpitindia.edu.in,VINAY KUMAR MISHRA,13720802723,Prashant Mishra,2023-2027,C,Computer Science & Engineering
+13820802723,aditya.shukla@bpitindia.edu.in,JAY PRAKASH,13820802723,Aditya Prakash Shukla,2023-2027,C,Computer Science & Engineering
+13920802723,vanshika.tanwar@bpitindia.edu.in,SUNIL KUMAR TANWAR,13920802723,Vanshika Tanwar,2023-2027,C,Computer Science & Engineering
+14020802723,aryan.aggarwal@bpitindia.edu.in,ANIL KUMAR,14020802723,Aryan Aggarwal,2023-2027,C,Computer Science & Engineering
+14120802723,pratap.singh@bpitindia.edu.in,PREM NARAYAN,14120802723,Pratap Singh,2023-2027,C,Computer Science & Engineering
+14220802723,gagan.sharma@bpitindia.edu.in,SUDESH SHARMA,14220802723,Gagan Sharma,2023-2027,C,Computer Science & Engineering
+14320802723,gul.mohammad@bpitindia.edu.in,MOHD ZAHID,14320802723,Gul Mohammad,2023-2027,C,Computer Science & Engineering
+14420802723,shashwat.vaish@bpitindia.edu.in,RAVI VAISH,14420802723,Shashwat Vaish,2023-2027,C,Computer Science & Engineering
+14520802723,prince.kumar@bpitindia.edu.in,BEERBAHADUR PANDIT,14520802723,Prince Kumar,2023-2027,C,Computer Science & Engineering
+14620802723,shwet.kashyap@bpitindia.edu.in,NIRAJ KISHOR JHA,14620802723,Shwet Kashyap,2023-2027,C,Computer Science & Engineering
+14720802723,ranjan@bpitindia.edu.in,KANHIYA MANDAL,14720802723,Ranjan,2023-2027,C,Computer Science & Engineering
+14820802723,nishit.pandey@bpitindia.edu.in,AVANISH PANDEY,14820802723,Nishit Pandey,2023-2027,C,Computer Science & Engineering
+14920802723,kajal@bpitindia.edu.in,PARSU RAM,14920802723,Kajal,2023-2027,C,Computer Science & Engineering
+15020802723,harshit.aggarwal@bpitindia.edu.in,RAJIV KUMAR,15020802723,Harshit Aggarwal,2023-2027,C,Computer Science & Engineering
+15120802723,mittul.baswala@bpitindia.edu.in,VINOD BASWALA,15120802723,Mittul Baswala,2023-2027,C,Computer Science & Engineering
+15220802723,mayank@bpitindia.edu.in,TARA CHAND,15220802723,Mayank,2023-2027,C,Computer Science & Engineering
+15320802723,yashash.singh@bpitindia.edu.in,SURESH KUMAR,15320802723,Yashash Singh,2023-2027,C,Computer Science & Engineering
+15420802723,hans.raj@bpitindia.edu.in,SANTOSH KUMAR,15420802723,Hans Raj,2023-2027,C,Computer Science & Engineering
+15520802723,arsh.tiwari@bpitindia.edu.in,UTKARSH TIWARI,15520802723,Arsh Tiwari,2023-2027,C,Computer Science & Engineering
+15620802723,preeti.kumari@bpitindia.edu.in,RAM BABU MAHTO,15620802723,Preeti Kumari,2023-2027,C,Computer Science & Engineering
+15720802723,shrishti.tomar@bpitindia.edu.in,ANAND SINGH TOMAR,15720802723,Shrishti Tomar,2023-2027,C,Computer Science & Engineering
+15820802723,divyanshi.aggarwal@bpitindia.edu.in,PRAVESH AGGARWAL,15820802723,Divyanshi Aggarwal,2023-2027,C,Computer Science & Engineering
+15920802723,sahil.kumar2@bpitindia.edu.in,MUNNA SAW,15920802723,Sahil Kumar,2023-2027,C,Computer Science & Engineering
+16020802723,riya.verma@bpitindia.edu.in,RAVENDRA KUMAR,16020802723,Riya Verma,2023-2027,C,Computer Science & Engineering
+16120802723,samarth.dhingra@bpitindia.edu.in,PRAMOD KUMAR DHINGRA,16120802723,Samarth Dhingra,2023-2027,C,Computer Science & Engineering
+75120802723,ananya.mahajan@bpitindia.edu.in,AJAY KUMAR,75120802723,Ananya Mahajan,2023-2027,C,Computer Science & Engineering
+75220802723,swayam.gupta@bpitindia.edu.in,RAJ KAPOOR,75220802723,Swayam Gupta,2023-2027,C,Computer Science & Engineering
+75320802723,aditi.chandyal@bpitindia.edu.in,SANJAY KUMAR,75320802723,Aditi Chandyal,2023-2027,C,Computer Science & Engineering
+120802823,aditya.rathore@bpitindia.edu.in,HARI SHANKAR SINGH,120802823,Aditya Rathore,2023-2027,A,Electronics & Communication Engineering
+220802823,shreyansh.rai@bpitindia.edu.in,SABHAJEET RAI,220802823,Shreyansh Rai,2023-2027,A,Electronics & Communication Engineering
+320802823,nayan.kumar@bpitindia.edu.in,HEERA MISHRA,320802823,Nayan Kumar,2023-2027,A,Electronics & Communication Engineering
+420802823,anshu.rani@bpitindia.edu.in,SUDHAKAR MISHRA,420802823,Anshu Rani,2023-2027,A,Electronics & Communication Engineering
+520802823,dishant.kumar@bpitindia.edu.in,RAJ KUMAR,520802823,Dishant Kumar,2023-2027,A,Electronics & Communication Engineering
+620802823,sanchit.chhillar@bpitindia.edu.in,KIRAN PAL,620802823,Sanchit Chhillar,2023-2027,A,Electronics & Communication Engineering
+720802823,nikhil.dhankhar@bpitindia.edu.in,SANJAY,720802823,Nikhil Dhankhar,2023-2027,A,Electronics & Communication Engineering
+820802823,anshika.bansal@bpitindia.edu.in,SANJEEV BANSAL,820802823,Anshika Bansal,2023-2027,A,Electronics & Communication Engineering
+920802823,somil.gupta@bpitindia.edu.in,MANU SHANKAR GUPTA,920802823,Somil Shankar Gupta,2023-2027,A,Electronics & Communication Engineering
+1020802823,rishabh.parasar@bpitindia.edu.in,KESHAV KUMAR NARONE,1020802823,Rishabh Parasar,2023-2027,A,Electronics & Communication Engineering
+1120802823,vansh.ahuja2@bpitindia.edu.in,MUKESH AHUJA,1120802823,Vansh Ahuja,2023-2027,A,Electronics & Communication Engineering
+1220802823,favian@bpitindia.edu.in,SHAZID ALI,1220802823,Favian,2023-2027,A,Electronics & Communication Engineering
+1320802823,kavya.seth@bpitindia.edu.in,AMIT SETH,1320802823,Kavya Seth,2023-2027,A,Electronics & Communication Engineering
+1420802823,abhay.pandit@bpitindia.edu.in,DILIP KUMAR,1420802823,Abhay Kumar Pandit,2023-2027,A,Electronics & Communication Engineering
+1520802823,kuldeep.kumar@bpitindia.edu.in,AMRITLAL GUPTA,1520802823,Kuldeep Kumar,2023-2027,A,Electronics & Communication Engineering
+1620802823,ashna.srivastava@bpitindia.edu.in,AVINASH KUMAR SRIVASTAVA,1620802823,Ashna Srivastava,2023-2027,A,Electronics & Communication Engineering
+1720802823,ronak.gupta@bpitindia.edu.in,LATE RAM NARESH GUPTA,1720802823,Ronak Gupta,2023-2027,A,Electronics & Communication Engineering
+1820802823,himanshu.sharma@bpitindia.edu.in,MANOJ KUMAR SHARMA,1820802823,Himanshu Sharma,2023-2027,A,Electronics & Communication Engineering
+1920802823,kunal.jain@bpitindia.edu.in,SURESH KUMAR JAIN,1920802823,Kunal Jain,2023-2027,A,Electronics & Communication Engineering
+2020802823,chhayan.saaini@bpitindia.edu.in,TARUN KUMAR SAINI,2020802823,Chhayan Saaini,2023-2027,A,Electronics & Communication Engineering
+2120802823,tanu.chaudhary@bpitindia.edu.in,RAJ KUMAR,2120802823,Tanu Chaudhary,2023-2027,A,Electronics & Communication Engineering
+2220802823,nishchay@bpitindia.edu.in,MUKESH,2220802823,Nishchay,2023-2027,A,Electronics & Communication Engineering
+2320802823,ankit.chamoli@bpitindia.edu.in,VINOD KUMAR CHAMOLI,2320802823,Ankit Chamoli,2023-2027,A,Electronics & Communication Engineering
+2420802823,avantika.sharma@bpitindia.edu.in,CHETAN SHARMA,2420802823,Avantika Sharma,2023-2027,A,Electronics & Communication Engineering
+2520802823,kunal.katyal@bpitindia.edu.in,AMIT KATYAL,2520802823,Kunal Katyal,2023-2027,A,Electronics & Communication Engineering
+2620802823,vaibhav.dubey@bpitindia.edu.in,ANIL KUMAR DUBEY,2620802823,Vaibhav Dubey,2023-2027,A,Electronics & Communication Engineering
+2720802823,pranav.gupta@bpitindia.edu.in,PARVEEN GUPTA,2720802823,Pranav Gupta,2023-2027,A,Electronics & Communication Engineering
+2820802823,mohd.zaid@bpitindia.edu.in,MUNAZIR HUSSAIN,2820802823,Mohd Zaid,2023-2027,A,Electronics & Communication Engineering
+2920802823,sagar.vashist@bpitindia.edu.in,RAKESH KUMAR VASHIST,2920802823,Sagar Vashist,2023-2027,A,Electronics & Communication Engineering
+3020802823,piyush.sharma@bpitindia.edu.in,DINESH SHARMA,3020802823,Piyush Sharma,2023-2027,A,Electronics & Communication Engineering
+3120802823,darsh.panwar@bpitindia.edu.in,ASHWANI KUMAR,3120802823,Darsh Panwar,2023-2027,A,Electronics & Communication Engineering
+3220802823,chhavi.gautam@bpitindia.edu.in,SANJAY GAUTAM,3220802823,Chhavi Gautam,2023-2027,A,Electronics & Communication Engineering
+3320802823,ayush.mishra@bpitindia.edu.in,A K MISHRA,3320802823,Ayush Kumar Mishra,2023-2027,A,Electronics & Communication Engineering
+3420802823,gyanvi@bpitindia.edu.in,PRABHAT KUMAR,3420802823,Gyanvi,2023-2027,A,Electronics & Communication Engineering
+3520802823,divyansh.singh@bpitindia.edu.in,DINESH KUMAR SINGH,3520802823,Divyansh Singh,2023-2027,A,Electronics & Communication Engineering
+3620802823,srijal.roy@bpitindia.edu.in,VISHNUDEO MANDAL,3620802823,Srijal Roy,2023-2027,A,Electronics & Communication Engineering
+3720802823,daksh.goyal@bpitindia.edu.in,NAVEEN KUMAR,3720802823,Daksh Goyal,2023-2027,A,Electronics & Communication Engineering
+3820802823,shashwat.tiwari@bpitindia.edu.in,UMESH TIWARI,3820802823,Shashwat Tiwari,2023-2027,A,Electronics & Communication Engineering
+3920802823,siddharth.negi@bpitindia.edu.in,PRADEEP SINGH NEGI,3920802823,Siddharth Singh Negi,2023-2027,A,Electronics & Communication Engineering
+4020802823,shambhavi.sinha@bpitindia.edu.in,ANISH KUMAR SINHA,4020802823,Shambhavi Sinha,2023-2027,A,Electronics & Communication Engineering
+4120802823,anusha.singh@bpitindia.edu.in,ARVIND KUMAR,4120802823,Anusha Singh,2023-2027,A,Electronics & Communication Engineering
+4220802823,sunny.singh@bpitindia.edu.in,GABBAR SINGH,4220802823,Sunny Raj Singh,2023-2027,A,Electronics & Communication Engineering
+4320802823,chaman.raj@bpitindia.edu.in,KAMALESHWAR KUMAR,4320802823,Chaman Raj,2023-2027,A,Electronics & Communication Engineering
+4420802823,anuj.solanki@bpitindia.edu.in,PARMOD SOLANKI,4420802823,Anuj Solanki,2023-2027,A,Electronics & Communication Engineering
+4520802823,shashwat.sharma@bpitindia.edu.in,RAKESH KUMAR,4520802823,Shashwat Sharma,2023-2027,A,Electronics & Communication Engineering
+4620802823,anil.kumar@bpitindia.edu.in,SHRIRAM SAHU,4620802823,Anil Kumar,2023-2027,A,Electronics & Communication Engineering
+4720802823,aryan.singh@bpitindia.edu.in,TRIPURARI PRASAD SINGH,4720802823,Aryan Singh,2023-2027,A,Electronics & Communication Engineering
+4820802823,komal.mittal@bpitindia.edu.in,NITIN KUMAR MITTAL,4820802823,Komal Mittal,2023-2027,A,Electronics & Communication Engineering
+35120802823,neha.jindal@bpitindia.edu.in,PAWAN KR. JINDAL,35120802823,Neha Jindal,2023-2027,A,Electronics & Communication Engineering
+35220802823,meet.batra@bpitindia.edu.in,SUNIL KR. BATRA,35220802823,Meet Batra,2023-2027,A,Electronics & Communication Engineering
+35320802823,sakshi.choudhary@bpitindia.edu.in,LT. YOGESH CHOUDHARY,35320802823,Sakshi Choudhary,2023-2027,A,Electronics & Communication Engineering
+35420802823,tanish.sharma@bpitindia.edu.in,PAWAN KUMAR,35420802823,Tanish Sharma,2023-2027,A,Electronics & Communication Engineering
+35520802823,lakshay.chhabra@bpitindia.edu.in,PRADEEP KR. CHHABRA,35520802823,Lakshay Chhabra,2023-2027,A,Electronics & Communication Engineering
+35620802823,vrazesh.kalwani@bpitindia.edu.in,C.P. KALWANI,35620802823,Vrazesh Kalwani,2023-2027,A,Electronics & Communication Engineering
+35720802823,palak.verma@bpitindia.edu.in,ASHOK KR. VERMA,35720802823,Palak Verma,2023-2027,A,Electronics & Communication Engineering
+35820802823,akshita.garg@bpitindia.edu.in,SUNIL GARG,35820802823,Akshita Garg,2023-2027,A,Electronics & Communication Engineering
+35920802823,shashwat.singh@bpitindia.edu.in,SANJAY SINGH,35920802823,Shashwat Singh,2023-2027,A,Electronics & Communication Engineering
+36020802823,sparsh.arora@bpitindia.edu.in,MANISH ARORA,36020802823,Sparsh Arora,2023-2027,A,Electronics & Communication Engineering
+36120802823,nandini.bhatia@bpitindia.edu.in,SANJAY BHATIA,36120802823,Nandini Bhatia,2023-2027,A,Electronics & Communication Engineering
+36220802823,parkhee.gulati@bpitindia.edu.in,NITIN GULATI,36220802823,Parkhee Gulati,2023-2027,A,Electronics & Communication Engineering
+4920802823,sitesh.mishra@bpitindia.edu.in,SATISH KUMAR MISHRA,4920802823,Sitesh Mishra,2023-2027,B,Electronics & Communication Engineering
+5020802823,priyanka@bpitindia.edu.in,BALBIR SINGH,5020802823,Priyanka,2023-2027,B,Electronics & Communication Engineering
+5120802823,kavya.bisht@bpitindia.edu.in,TARA SINGH BISHT,5120802823,Kavya Singh Bisht,2023-2027,B,Electronics & Communication Engineering
+5220802823,rohit@bpitindia.edu.in,RAJESH KUMAR,5220802823,Rohit,2023-2027,B,Electronics & Communication Engineering
+5320802823,geetika.behl@bpitindia.edu.in,SANJAY BEHL,5320802823,Geetika Behl,2023-2027,B,Electronics & Communication Engineering
+5420802823,karan.prashar@bpitindia.edu.in,RANJAN PRASHAR,5420802823,Karan Prashar,2023-2027,B,Electronics & Communication Engineering
+5520802823,diya.jain@bpitindia.edu.in,VIKAS JAIN,5520802823,Diya Jain,2023-2027,B,Electronics & Communication Engineering
+5620802823,abhishek.kumar@bpitindia.edu.in,RAJAN SINGH,5620802823,Abhishek Kumar,2023-2027,B,Electronics & Communication Engineering
+5720802823,tanisk.bhadauriya@bpitindia.edu.in,VIJAY KUMAR BHADAURIYA,5720802823,Tanisk Bhadauriya,2023-2027,B,Electronics & Communication Engineering
+5820802823,vidhan.bisht@bpitindia.edu.in,DHAN SINGH BISHT,5820802823,Vidhan Bisht,2023-2027,B,Electronics & Communication Engineering
+5920802823,akshit.dhua@bpitindia.edu.in,NANDA DULAL DHUA,5920802823,Akshit Dhua,2023-2027,B,Electronics & Communication Engineering
+6020802823,anshika@bpitindia.edu.in,INDRA NATH JHA,6020802823,Anshika,2023-2027,B,Electronics & Communication Engineering
+6120802823,parul.gupta@bpitindia.edu.in,MANESH GUPTA,6120802823,Parul Gupta,2023-2027,B,Electronics & Communication Engineering
+6220802823,saharsh.sharma@bpitindia.edu.in,MANISH JHA,6220802823,Saharsh Sharma,2023-2027,B,Electronics & Communication Engineering
+6320802823,rohit.agrawal@bpitindia.edu.in,AMIT KUMAR AGRAWAL,6320802823,Rohit Agrawal,2023-2027,B,Electronics & Communication Engineering
+6420802823,akhilesh.kumar@bpitindia.edu.in,RABINDRA KUMAR YADAV,6420802823,Akhilesh Kumar,2023-2027,B,Electronics & Communication Engineering
+6520802823,bhoomika.sharma@bpitindia.edu.in,KRISHAN DUTT SHARMA,6520802823,Bhoomika Sharma,2023-2027,B,Electronics & Communication Engineering
+6620802823,ujjwal@bpitindia.edu.in,JASBIR SINGH,6620802823,Ujjwal,2023-2027,B,Electronics & Communication Engineering
+6720802823,vardan.kadyan@bpitindia.edu.in,NARESH CHANDER,6720802823,Vardan Kadyan,2023-2027,B,Electronics & Communication Engineering
+6820802823,mayuresh.mehta@bpitindia.edu.in,PRAMOD KUMAR,6820802823,Mayuresh Mehta,2023-2027,B,Electronics & Communication Engineering
+6920802823,manish.kumar@bpitindia.edu.in,KAILASH KUMAR,6920802823,Manish Kumar,2023-2027,B,Electronics & Communication Engineering
+7020802823,navtesh.dagur@bpitindia.edu.in,SHAILESH KUMAR,7020802823,Navtesh Dagur,2023-2027,B,Electronics & Communication Engineering
+7120802823,raj.keshri@bpitindia.edu.in,VINAY KUMAR KESHRI,7120802823,Raj Keshri,2023-2027,B,Electronics & Communication Engineering
+7220802823,shiv.verma@bpitindia.edu.in,HARIRAM,7220802823,Shiv Poojan Verma,2023-2027,B,Electronics & Communication Engineering
+7320802823,yatharth.sachdeva@bpitindia.edu.in,MANOJ KUMAR SACHDEVA,7320802823,Yatharth Sachdeva,2023-2027,B,Electronics & Communication Engineering
+7420802823,manish.kumar2@bpitindia.edu.in,MANOJ SINGH,7420802823,Manish Kumar,2023-2027,B,Electronics & Communication Engineering
+7520802823,utkarsh.tiwari@bpitindia.edu.in,MANOJ TIWARI,7520802823,Utkarsh Tiwari,2023-2027,B,Electronics & Communication Engineering
+7620802823,tushar.kumar@bpitindia.edu.in,SANTOSH KUMAR,7620802823,Tushar Kumar,2023-2027,B,Electronics & Communication Engineering
+7720802823,ravinder@bpitindia.edu.in,TEJVIR,7720802823,Ravinder,2023-2027,B,Electronics & Communication Engineering
+7820802823,khushi2@bpitindia.edu.in,TARSEM CHAND,7820802823,Khushi,2023-2027,B,Electronics & Communication Engineering
+7920802823,chirag.kashyap@bpitindia.edu.in,KUMAR GUNJAN,7920802823,Chirag Kashyap,2023-2027,B,Electronics & Communication Engineering
+8020802823,adhiseem.pandey@bpitindia.edu.in,VIVEK CHANDRA PANDEY,8020802823,Adhiseem Pandey,2023-2027,B,Electronics & Communication Engineering
+8120802823,harsh.kumar2@bpitindia.edu.in,ANURODH KUMAR,8120802823,Harsh Kumar,2023-2027,B,Electronics & Communication Engineering
+8220802823,hardik.birla@bpitindia.edu.in,PRAVEEN KUMAR,8220802823,Hardik Birla,2023-2027,B,Electronics & Communication Engineering
+8320802823,pradeep.chauhan@bpitindia.edu.in,RAMASHRAY CHAUHAN,8320802823,Pradeep Chauhan,2023-2027,B,Electronics & Communication Engineering
+8420802823,meet.singh@bpitindia.edu.in,SURENDER PAL SINGH,8420802823,Meet Singh,2023-2027,B,Electronics & Communication Engineering
+8520802823,avii.tiwari@bpitindia.edu.in,MANOJ TIWARI,8520802823,Avii Tiwari,2023-2027,B,Electronics & Communication Engineering
+8620802823,amon.sadhu@bpitindia.edu.in,ANIRBAN SADHU,8620802823,Amon Sadhu,2023-2027,B,Electronics & Communication Engineering
+8720802823,atharv.gupta@bpitindia.edu.in,ASHISH KUMAR GUPTA,8720802823,Atharv Gupta,2023-2027,B,Electronics & Communication Engineering
+8820802823,aditya2@bpitindia.edu.in,ATTAR SINGH,8820802823,Aditya,2023-2027,B,Electronics & Communication Engineering
+8920802823,shukla.gaurav@bpitindia.edu.in,RAKESH SHUKLA,8920802823,Shukla Gaurav,2023-2027,B,Electronics & Communication Engineering
+9020802823,sarthak@bpitindia.edu.in,MUKESH,9020802823,Sarthak,2023-2027,B,Electronics & Communication Engineering
+9120802823,gautam.punjabi@bpitindia.edu.in,TARUN KUMAR PUNJABI,9120802823,Gautam Punjabi,2023-2027,B,Electronics & Communication Engineering
+9220802823,ananya.agarwal@bpitindia.edu.in,PANKAJ AGARWAL,9220802823,Ananya Agarwal,2023-2027,B,Electronics & Communication Engineering
+9320802823,swastik.behera@bpitindia.edu.in,RAJENDRA BEHERA,9320802823,Swastik Kumar Behera,2023-2027,B,Electronics & Communication Engineering
+9420802823,lakshay2@bpitindia.edu.in,INDER PAL SINGH,9420802823,Lakshay,2023-2027,B,Electronics & Communication Engineering
+9520802823,aditya.mohan@bpitindia.edu.in,HARI MOHAN VERMA,9520802823,Aditya Mohan,2023-2027,B,Electronics & Communication Engineering
+9620802823,piyush.yadav@bpitindia.edu.in,BIRENDRA YADAV,9620802823,Piyush Yadav,2023-2027,B,Electronics & Communication Engineering
+9720802823,anurag.gupta@bpitindia.edu.in,PARVEEN KUMAR GUPTA,9720802823,Anurag Gupta,2023-2027,B,Electronics & Communication Engineering
+9820802823,quonain.khan@bpitindia.edu.in,HARUN RASHID KHAN,9820802823,Quonain Raza Khan,2023-2027,B,Electronics & Communication Engineering
+9920802823,naman.verma@bpitindia.edu.in,VIVEK VERMA,9920802823,Naman Verma,2023-2027,B,Electronics & Communication Engineering
+75120802823,vansh.shah@bpitindia.edu.in,ASHOK KUMAR SHAH,75120802823,Vansh Shah,2023-2027,B,Electronics & Communication Engineering
+75220802823,manvee.dubey@bpitindia.edu.in,PARDEEP KUMAR,75220802823,Manvee Dubey,2023-2027,B,Electronics & Communication Engineering
+70120802823,aadya.sharma@bpitindia.edu.in,ALOK SHARMA,70120802823,Aadya Sharma,2023-2027,B,Electronics & Communication Engineering
+120803123,khushwant.sharma@bpitindia.edu.in,AJAY KUMAR,120803123,Khushwant Sharma,2023-2027,A,Information Technology
+220803123,aditya.menon@bpitindia.edu.in,PRAMOD MENON,220803123,Aditya Menon,2023-2027,A,Information Technology
+320803123,aditya.anand@bpitindia.edu.in,RAJIV RANJAN JHA,320803123,Aditya Anand,2023-2027,A,Information Technology
+420803123,vishal.saxena@bpitindia.edu.in,BK SAXENA,420803123,Vishal Saxena,2023-2027,A,Information Technology
+520803123,drishti.gupta@bpitindia.edu.in,MUNESH KUMAR,520803123,Drishti Gupta,2023-2027,A,Information Technology
+620803123,ashish.vaish@bpitindia.edu.in,SUDESH KUMAR,620803123,Ashish Kumar Vaish,2023-2027,A,Information Technology
+720803123,prateek.gupta@bpitindia.edu.in,MOOL CHAND GUPTA,720803123,Prateek Kumar Gupta,2023-2027,A,Information Technology
+820803123,keshav.tayal@bpitindia.edu.in,MEGHRAJ TAYAL,820803123,Keshav Tayal,2023-2027,A,Information Technology
+920803123,raghav.bansal@bpitindia.edu.in,AMIT,920803123,Raghav Bansal,2023-2027,A,Information Technology
+1020803123,sarthak.nirula@bpitindia.edu.in,SANJAY NIRULA,1020803123,Sarthak Nirula,2023-2027,A,Information Technology
+1120803123,anant.jain@bpitindia.edu.in,RAJESH JAIN,1120803123,Anant Jain,2023-2027,A,Information Technology
+1220803123,arya.singh@bpitindia.edu.in,JANARDAN KUMAR,1220803123,Arya Singh,2023-2027,A,Information Technology
+1320803123,utsav.jana@bpitindia.edu.in,UTPAL JANA,1320803123,Utsav Jana,2023-2027,A,Information Technology
+1420803123,vanssh.dooa@bpitindia.edu.in,RAVINDER DUA,1420803123,Vanssh Dooa,2023-2027,A,Information Technology
+1520803123,sparsh.mahajan@bpitindia.edu.in,AMIT MAHAJAN,1520803123,Sparsh Mahajan,2023-2027,A,Information Technology
+1620803123,bhumi.jaswani@bpitindia.edu.in,JITENDRA JASWANI,1620803123,Bhumi Jaswani,2023-2027,A,Information Technology
+1720803123,arpit@bpitindia.edu.in,PRADEEP KUMAR,1720803123,Arpit,2023-2027,A,Information Technology
+1820803123,aman.raj@bpitindia.edu.in,RAM KUMAR,1820803123,Aman Raj,2023-2027,A,Information Technology
+1920803123,jhanvi.goel@bpitindia.edu.in,RAKESH KUMAR GOEL,1920803123,Jhanvi Goel,2023-2027,A,Information Technology
+2020803123,parth.mittal@bpitindia.edu.in,DEEPAK MITTAL,2020803123,Parth Mittal,2023-2027,A,Information Technology
+2120803123,vishal.belwal@bpitindia.edu.in,PRAMOD KUMAR BELWAL,2120803123,Vishal Belwal,2023-2027,A,Information Technology
+2220803123,md.khan@bpitindia.edu.in,MUNEER ALAM KHAN,2220803123,Md Yasir Khan,2023-2027,A,Information Technology
+2320803123,samyak.jain@bpitindia.edu.in,AMIT JAIN,2320803123,Samyak Jain,2023-2027,A,Information Technology
+2420803123,arush.karnatak@bpitindia.edu.in,BHUVNESH KARNATAK,2420803123,Arush Karnatak,2023-2027,A,Information Technology
+2520803123,shivanshu.prakash@bpitindia.edu.in,PAWAN KUMAR GUPTA,2520803123,Shivanshu Prakash,2023-2027,A,Information Technology
+2620803123,janit.berwal@bpitindia.edu.in,RAKESH BERWAL,2620803123,Janit Berwal,2023-2027,A,Information Technology
+2720803123,shaksham@bpitindia.edu.in,SUMAN KUMAR JHA,2720803123,Shaksham,2023-2027,A,Information Technology
+2820803123,manya.tyagi@bpitindia.edu.in,VIVEK KUMAR TYAGI,2820803123,Manya Tyagi,2023-2027,A,Information Technology
+2920803123,mrityunjay.singh@bpitindia.edu.in,BIRENDER KUMAR,2920803123,Mrityunjay Singh,2023-2027,A,Information Technology
+3020803123,isha.gautam@bpitindia.edu.in,SONU GAUTAM,3020803123,Isha Gautam,2023-2027,A,Information Technology
+3120803123,govind.vashishat@bpitindia.edu.in,RAKESH VASHISHAT,3120803123,Govind Vashishat,2023-2027,A,Information Technology
+3220803123,jaskrit.singh@bpitindia.edu.in,HARVINDER SINGH,3220803123,Jaskrit Singh,2023-2027,A,Information Technology
+3320803123,vivek.vaibhav@bpitindia.edu.in,AJAY KUMAR,3320803123,Vivek Vaibhav,2023-2027,A,Information Technology
+3420803123,rohit.jain@bpitindia.edu.in,RAJ KUMAR JAIN,3420803123,Rohit Jain,2023-2027,A,Information Technology
+3520803123,sumit.kumar@bpitindia.edu.in,MAHESH KUMAR,3520803123,Sumit Kumar,2023-2027,A,Information Technology
+3620803123,nisha.kumari@bpitindia.edu.in,BHOLA SHANKAR,3620803123,Nisha Kumari,2023-2027,A,Information Technology
+3720803123,harshit.bhagoria@bpitindia.edu.in,NARESH CHANDER,3720803123,Harshit Bhagoria,2023-2027,A,Information Technology
+3820803123,rachit.badola@bpitindia.edu.in,M K BADOLA,3820803123,Rachit Badola,2023-2027,A,Information Technology
+3920803123,himanshu.pandey@bpitindia.edu.in,GIRISH PANDEY,3920803123,Himanshu Pandey,2023-2027,A,Information Technology
+4020803123,yagas.vashist@bpitindia.edu.in,LALIT KUMAR VASHIST,4020803123,Yagas Vashist,2023-2027,A,Information Technology
+4120803123,deepanshu@bpitindia.edu.in,PRAMOD KUMAR,4120803123,Deepanshu,2023-2027,A,Information Technology
+4220803123,satnam.singh@bpitindia.edu.in,SUSHIL SINGH,4220803123,Satnam Singh,2023-2027,A,Information Technology
+35120803123,shweta.kushwaha@bpitindia.edu.in,ASHUTOSH KUMAR,35120803123,Shweta Kushwaha,2023-2027,A,Information Technology
+35220803123,siddhant.deshwal@bpitindia.edu.in,HEMANT DESHWAL,35220803123,Siddhant Deshwal,2023-2027,A,Information Technology
+35320803123,vansh@bpitindia.edu.in,NEERAJ KUMAR,35320803123,Vansh,2023-2027,A,Information Technology
+35420803123,srijan.sangal@bpitindia.edu.in,AMIT SANGAL,35420803123,Srijan Sangal,2023-2027,A,Information Technology
+35520803123,aniket.negi@bpitindia.edu.in,AMIT NEGI,35520803123,Aniket Negi,2023-2027,A,Information Technology
+35620803123,priyanshi.bothra@bpitindia.edu.in,JITENDER KR. BOTHRA,35620803123,Priyanshi Bothra,2023-2027,A,Information Technology
+35720803123,samarth.arora@bpitindia.edu.in,AVINASH ARORA,35720803123,Samarth Arora,2023-2027,A,Information Technology
+35820803123,namit.gupta@bpitindia.edu.in,ARUN GUPTA,35820803123,Namit Gupta,2023-2027,A,Information Technology
+35920803123,aradhya.katyal@bpitindia.edu.in,KAPIL KATYAL,35920803123,Aradhya Katyal,2023-2027,A,Information Technology
+36020803123,vrinda.gupta@bpitindia.edu.in,PANKAJ GUPTA,36020803123,Vrinda Gupta,2023-2027,A,Information Technology
+36120803123,ishitaa.singh@bpitindia.edu.in,DINESH,36120803123,Ishitaa Singh,2023-2027,A,Information Technology
+36220803123,vansh.aggarwal@bpitindia.edu.in,UMESH AGGARWAL,36220803123,Vansh Aggarwal,2023-2027,A,Information Technology
+36320803123,nitin@bpitindia.edu.in,NARINDER KUMAR,36320803123,Nitin,2023-2027,A,Information Technology
+36420803123,lakshay3@bpitindia.edu.in,JAI SINGH,36420803123,Lakshay,2023-2027,A,Information Technology
+36520803123,shaarang.rastogi@bpitindia.edu.in,VIKAS RASTOGI,36520803123,Shaarang Rastogi,2023-2027,A,Information Technology
+36620803123,harshal.saxena@bpitindia.edu.in,ANURAG SAXENA,36620803123,Harshal Saxena,2023-2027,A,Information Technology
+36720803123,ishitaa.sabharwal@bpitindia.edu.in,ANJAY SABHARWAL,36720803123,Ishitaa Sabharwal,2023-2027,A,Information Technology
+36820803123,om.jee@bpitindia.edu.in,DHARMENDRA PRAKASH,36820803123,Om Jee,2023-2027,A,Information Technology
+4320803123,dhruvi.upadhyay@bpitindia.edu.in,ARVIND KUMAR UPADHYAY,4320803123,Dhruvi Upadhyay,2023-2027,B,Information Technology
+4420803123,jasleen.kaur@bpitindia.edu.in,JAGMEET SINGH SABHARWAL,4420803123,Jasleen Kaur,2023-2027,B,Information Technology
+4520803123,vikram.saini@bpitindia.edu.in,PARMOD KUMAR SAINI,4520803123,Vikram Saini,2023-2027,B,Information Technology
+4620803123,divyansh.gupta@bpitindia.edu.in,RAJENDRA GUPTA,4620803123,Divyansh Gupta,2023-2027,B,Information Technology
+4720803123,sakshi.kundra@bpitindia.edu.in,RAJEEV KUNDRA,4720803123,Sakshi Kundra,2023-2027,B,Information Technology
+4820803123,sirjanjeet.singh@bpitindia.edu.in,MANJEET SINGH,4820803123,Sirjanjeet Singh,2023-2027,B,Information Technology
+4920803123,daksh.gola@bpitindia.edu.in,VAIBHAV GOLA,4920803123,Daksh Gola,2023-2027,B,Information Technology
+5020803123,tanya.aggarwal@bpitindia.edu.in,SUNIL AGGARWAL,5020803123,Tanya Aggarwal,2023-2027,B,Information Technology
+5120803123,shreya.jaiswal@bpitindia.edu.in,DHANANJAY KUMAR,5120803123,Shreya Jaiswal,2023-2027,B,Information Technology
+5220803123,krish.gupta@bpitindia.edu.in,MUKESH KUMAR GUPTA,5220803123,Krish Gupta,2023-2027,B,Information Technology
+5320803123,garima.purohit@bpitindia.edu.in,HARI HAR PUROHIT,5320803123,Garima Purohit,2023-2027,B,Information Technology
+5420803123,rakshit.rao@bpitindia.edu.in,RAJESH RAO,5420803123,Rakshit Rao,2023-2027,B,Information Technology
+5520803123,ujjwal.jha@bpitindia.edu.in,SANTOSH KUMAR JHA,5520803123,Ujjwal Kumar Jha,2023-2027,B,Information Technology
+5620803123,ankit@bpitindia.edu.in,RAJ KUMAR,5620803123,Ankit,2023-2027,B,Information Technology
+5720803123,sams.alam@bpitindia.edu.in,MJ ANSARI,5720803123,Sams Alam,2023-2027,B,Information Technology
+5820803123,vansh.babbar@bpitindia.edu.in,DINESH KUMAR,5820803123,Vansh Babbar,2023-2027,B,Information Technology
+5920803123,shivam.singh@bpitindia.edu.in,MUKESH SINGH,5920803123,Shivam Singh,2023-2027,B,Information Technology
+6020803123,aditya.gupta@bpitindia.edu.in,SACHIN GUPTA,6020803123,Aditya Om Gupta,2023-2027,B,Information Technology
+6120803123,maaz.ahmad@bpitindia.edu.in,SYED EJAZ AHMAD,6120803123,Maaz Ahmad,2023-2027,B,Information Technology
+6220803123,subhan.saifi@bpitindia.edu.in,SHAHID ALI,6220803123,Subhan Saifi,2023-2027,B,Information Technology
+6320803123,aniket@bpitindia.edu.in,MANOJ KUMAR TIWARY,6320803123,Aniket,2023-2027,B,Information Technology
+6420803123,aryan@bpitindia.edu.in,RAM AVTAR,6420803123,Aryan,2023-2027,B,Information Technology
+6520803123,kautilya.jaiswal@bpitindia.edu.in,DEEPAK JAISWAL,6520803123,Kautilya Jaiswal,2023-2027,B,Information Technology
+6620803123,satyam.jha@bpitindia.edu.in,PRAMOD KUMAR JHA,6620803123,Satyam Kumar Jha,2023-2027,B,Information Technology
+6720803123,aryan.shrivastav@bpitindia.edu.in,AKHILESH SRIVASTAV,6720803123,Aryan Shrivastav,2023-2027,B,Information Technology
+6820803123,shivaanshi@bpitindia.edu.in,DINESH KUMAR,6820803123,Shivaanshi,2023-2027,B,Information Technology
+6920803123,shubham.sharma@bpitindia.edu.in,VED PRAKASH SHARMA,6920803123,Shubham Sharma,2023-2027,B,Information Technology
+7020803123,adwait.tiwari@bpitindia.edu.in,MAHESH TIWARI,7020803123,Adwait Tiwari,2023-2027,B,Information Technology
+7120803123,raashi.mathur@bpitindia.edu.in,RAKESH MATHUR,7120803123,Raashi Mathur,2023-2027,B,Information Technology
+7220803123,nibedan.pati@bpitindia.edu.in,DEBASIS PATI,7220803123,Nibedan Pati,2023-2027,B,Information Technology
+7320803123,ishita.jain@bpitindia.edu.in,SUNIL JAIN,7320803123,Ishita Jain,2023-2027,B,Information Technology
+7420803123,shubharth.upadhyay@bpitindia.edu.in,KESHAV UPADHYAY,7420803123,Shubharth Upadhyay,2023-2027,B,Information Technology
+7520803123,ayush.attri@bpitindia.edu.in,DEEPAK,7520803123,Ayush Attri,2023-2027,B,Information Technology
+7620803123,pratyush.sharma@bpitindia.edu.in,PRAVESH KUMAR SHARMA,7620803123,Pratyush Sharma,2023-2027,B,Information Technology
+7720803123,vishal.garg@bpitindia.edu.in,RAJEEV GARG,7720803123,Vishal Garg,2023-2027,B,Information Technology
+7820803123,nikhil.tiwari@bpitindia.edu.in,AKHILESHWER TIWARI,7820803123,Nikhil Tiwari,2023-2027,B,Information Technology
+7920803123,kosang.yadav@bpitindia.edu.in,PANKAJ KUMAR,7920803123,Kosang Yadav,2023-2027,B,Information Technology
+8020803123,himangshu.saikia@bpitindia.edu.in,BIPUL SAIKIA,8020803123,Himangshu Saikia,2023-2027,B,Information Technology
+8120803123,kritika.bisht@bpitindia.edu.in,DILAWAR SINGH BISHT,8120803123,Kritika Bisht,2023-2027,B,Information Technology
+8220803123,yash.bhardwaj@bpitindia.edu.in,RAJ PAL,8220803123,Yash Bhardwaj,2023-2027,B,Information Technology
+8320803123,manish.raj@bpitindia.edu.in,LAL BABU SINGH,8320803123,Manish Raj,2023-2027,B,Information Technology
+8420803123,anshuman.kumar@bpitindia.edu.in,SONU,8420803123,Anshuman Kumar,2023-2027,B,Information Technology
+8520803123,krish.mishra@bpitindia.edu.in,R.K. MISHRA,8520803123,Krish Mishra,2023-2027,B,Information Technology
+8620803123,harsh.verma@bpitindia.edu.in,SUBHASH KUMAR,8620803123,Harsh Kumar Verma,2023-2027,B,Information Technology
+8720803123,shivam.roy@bpitindia.edu.in,BISHNU KANT ROY,8720803123,Shivam Kumar Roy,2023-2027,B,Information Technology
+8820803123,chandan.sahoo@bpitindia.edu.in,JAGANNATH SAHOO,8820803123,Chandan Sahoo,2023-2027,B,Information Technology
+8920803123,nipun.goel@bpitindia.edu.in,RAJESH GOEL,8920803123,Nipun Goel,2023-2027,B,Information Technology
+9020803123,shivam.sharma@bpitindia.edu.in,MUKESH SHARMA,9020803123,Shivam Sharma,2023-2027,B,Information Technology
+9120803123,kushagra.trivedi@bpitindia.edu.in,SARVESH KUMAR TRIVEDI,9120803123,Kushagra Trivedi,2023-2027,B,Information Technology
+9220803123,astha.negi@bpitindia.edu.in,PRATAP SINGH NEGI,9220803123,Astha Negi,2023-2027,B,Information Technology
+9320803123,aman.kumar@bpitindia.edu.in,AJAY KUMAR,9320803123,Aman Kumar,2023-2027,B,Information Technology
+9420803123,dhruv.kumar@bpitindia.edu.in,SANJAY KUMAR,9420803123,Dhruv Kumar,2023-2027,B,Information Technology
+9520803123,keshav.ansh@bpitindia.edu.in,RAKESH KUMAR,9520803123,Keshav Kumar Ansh,2023-2027,B,Information Technology
+9620803123,divya.tiwari@bpitindia.edu.in,HANSNATH TIWARI,9620803123,Divya Prakash Tiwari,2023-2027,B,Information Technology
+9720803123,piyush.arora@bpitindia.edu.in,RAKESH KUMAR,9720803123,Piyush Arora,2023-2027,B,Information Technology
+9820803123,kanishk.verma@bpitindia.edu.in,DEVENDRA VERMA,9820803123,Kanishk Verma,2023-2027,B,Information Technology
+9920803123,aryan.srivastava@bpitindia.edu.in,GAUTAM HANS SRIVASTAVA,9920803123,Aryan Srivastava,2023-2027,B,Information Technology
+10020803123,anshit.sharma@bpitindia.edu.in,SUNIL KUMAR SHARMA,10020803123,Anshit Sharma,2023-2027,B,Information Technology
+10120803123,vishal.singh@bpitindia.edu.in,DALJEET SINGH,10120803123,Vishal Singh,2023-2027,B,Information Technology
+10220803123,adarsh.kumar@bpitindia.edu.in,SUSHIL KUMAR JHA,10220803123,Adarsh Kumar,2023-2027,B,Information Technology
+10320803123,gurleen.singh@bpitindia.edu.in,RANJIT SINGH,10320803123,Gurleen Singh,2023-2027,C,Information Technology
+10420803123,kaushal.kumar@bpitindia.edu.in,BHOLA SAH,10420803123,Kaushal Kumar,2023-2027,C,Information Technology
+10520803123,mehak.suri@bpitindia.edu.in,CHARU SURI,10520803123,Mehak Suri,2023-2027,C,Information Technology
+10620803123,deepanshu2@bpitindia.edu.in,RAM KISHOR,10620803123,Deepanshu,2023-2027,C,Information Technology
+10720803123,anurag.rawat@bpitindia.edu.in,VIJAY SINGH RAWAT,10720803123,Anurag Singh Rawat,2023-2027,C,Information Technology
+10820803123,disha.jain@bpitindia.edu.in,DEEPAK KUMAR JAIN,10820803123,Disha Jain,2023-2027,C,Information Technology
+10920803123,priyanshi.khurana@bpitindia.edu.in,SATISH KUMAR,10920803123,Priyanshi Khurana,2023-2027,C,Information Technology
+11020803123,kavi@bpitindia.edu.in,KRISHAN KUMAR,11020803123,Kavi,2023-2027,C,Information Technology
+11120803123,himanshu.choudhary@bpitindia.edu.in,HARKESH CHOUDHARY,11120803123,Himanshu Choudhary,2023-2027,C,Information Technology
+11220803123,neha.rawat@bpitindia.edu.in,SAROOP SINGH,11220803123,Neha Rawat,2023-2027,C,Information Technology
+11320803123,ravi.yadav@bpitindia.edu.in,HARILAL YADAV,11320803123,Ravi Kumar Yadav,2023-2027,C,Information Technology
+11420803123,tushar.sharma@bpitindia.edu.in,ROSHAN LAL SHARMA,11420803123,Tushar Sharma,2023-2027,C,Information Technology
+11520803123,anupam.das@bpitindia.edu.in,UTTAM KUMAR DAS,11520803123,Anupam Das,2023-2027,C,Information Technology
+11620803123,manohar.kumar@bpitindia.edu.in,CHHOTAN PRASAD,11620803123,Manohar Kumar,2023-2027,C,Information Technology
+11720803123,harshit.garg@bpitindia.edu.in,RAJ KUMAR,11720803123,Harshit Garg,2023-2027,C,Information Technology
+11820803123,tushar.sharma2@bpitindia.edu.in,DEVI DAYAL SHARMA,11820803123,Tushar Sharma,2023-2027,C,Information Technology
+11920803123,kajal.yadav@bpitindia.edu.in,ARVIND YADAV,11920803123,Kajal Yadav,2023-2027,C,Information Technology
+12020803123,vansh.garg@bpitindia.edu.in,TARUN DEEP AGGARWAL,12020803123,Vansh Garg,2023-2027,C,Information Technology
+12120803123,keshav.mehra@bpitindia.edu.in,HEMANT MEHRA,12120803123,Keshav Mehra,2023-2027,C,Information Technology
+12220803123,harshit@bpitindia.edu.in,BITTU,12220803123,Harshit,2023-2027,C,Information Technology
+12320803123,astha.shukla@bpitindia.edu.in,MANI KANT SHUKLA,12320803123,Astha Shukla,2023-2027,C,Information Technology
+12420803123,romanch.singh@bpitindia.edu.in,RAGHBENDRA KUMAR SINGH,12420803123,Romanch Roshan Singh,2023-2027,C,Information Technology
+12520803123,naman@bpitindia.edu.in,PARAS NATH,12520803123,Naman,2023-2027,C,Information Technology
+12620803123,aman.kumar2@bpitindia.edu.in,PANKAJ KUMAR TIWARI,12620803123,Aman Kumar,2023-2027,C,Information Technology
+12720803123,akshit@bpitindia.edu.in,RAJKUMAR,12720803123,Akshit,2023-2027,C,Information Technology
+12820803123,sunny.haokip@bpitindia.edu.in,HEGIN HAOKIP,12820803123,Sunny Haokip,2023-2027,C,Information Technology
+12920803123,chandra.shekhar@bpitindia.edu.in,GANESH CHANDRA,12920803123,Chandra Shekhar,2023-2027,C,Information Technology
+13020803123,kartikey.srivastava@bpitindia.edu.in,ANKUR SRIVASTAVA,13020803123,Kartikey Srivastava,2023-2027,C,Information Technology
+13120803123,aditi.sharma@bpitindia.edu.in,SHIV KUMAR SHARMA,13120803123,Aditi Sharma,2023-2027,C,Information Technology
+13220803123,dhruv.raj@bpitindia.edu.in,RAJ KUMAR,13220803123,Dhruv Raj,2023-2027,C,Information Technology
+13320803123,anurag.kumar@bpitindia.edu.in,AMBIKA PRASAD,13320803123,Anurag Kumar,2023-2027,C,Information Technology
+13420803123,aaquib.khan@bpitindia.edu.in,RAFAT NAWAZ,13420803123,Aaquib Nawaz Khan,2023-2027,C,Information Technology
+13520803123,anmol.kumar@bpitindia.edu.in,VIJAY KUMAR,13520803123,Anmol Kumar,2023-2027,C,Information Technology
+13620803123,vishnu.kumar@bpitindia.edu.in,PREM CHAND,13620803123,Vishnu Kumar,2023-2027,C,Information Technology
+13720803123,kashivi.goel@bpitindia.edu.in,DHEERAJ GOEL,13720803123,Kashivi Goel,2023-2027,C,Information Technology
+13820803123,achyut.kumar@bpitindia.edu.in,AJAY KUMAR CHAUDHARY,13820803123,Achyut Kumar,2023-2027,C,Information Technology
+13920803123,suraj.shukla@bpitindia.edu.in,PAWAN SHUKLA,13920803123,Suraj Shukla,2023-2027,C,Information Technology
+14020803123,parth.mukheria@bpitindia.edu.in,VIRENDER KUMAR MUKHERIA,14020803123,Parth Mukheria,2023-2027,C,Information Technology
+14120803123,karan.pathak@bpitindia.edu.in,SUNDER LAL,14120803123,Karan Pathak,2023-2027,C,Information Technology
+14220803123,krishna.tyagi@bpitindia.edu.in,MANOJ KUMAR TYAGI,14220803123,Krishna Tyagi,2023-2027,C,Information Technology
+14320803123,anamika.singh@bpitindia.edu.in,MANOJ KUMAR,14320803123,Anamika Singh,2023-2027,C,Information Technology
+14420803123,vartika.singh@bpitindia.edu.in,MR.CHANDRA SHEKHAR,14420803123,Vartika Singh,2023-2027,C,Information Technology
+14520803123,aditya.jha@bpitindia.edu.in,ARJUN KUMAR JHA,14520803123,Aditya Kumar Jha,2023-2027,C,Information Technology
+14620803123,sarthak.makkar@bpitindia.edu.in,PAWAN KUMAR,14620803123,Sarthak Makkar,2023-2027,C,Information Technology
+14720803123,vrinda.bindal@bpitindia.edu.in,SANJAY,14720803123,Vrinda Bindal,2023-2027,C,Information Technology
+14820803123,ayush.yadav@bpitindia.edu.in,BIRENDRA YADAV,14820803123,Ayush Yadav,2023-2027,C,Information Technology
+14920803123,aman.agrawal@bpitindia.edu.in,RAM KUMAR AGRAWAL,14920803123,Aman Agrawal,2023-2027,C,Information Technology
+15020803123,nikhil@bpitindia.edu.in,TRIPURARI SHANKAR,15020803123,Nikhil,2023-2027,C,Information Technology
+15120803123,shubh.shukla@bpitindia.edu.in,JITENDER KUMAR SHUKLA,15120803123,Shubh Shukla,2023-2027,C,Information Technology
+15220803123,manasvi.aale@bpitindia.edu.in,RAJESH KUMAR,15220803123,Manasvi Aale,2023-2027,C,Information Technology
+15320803123,nikhil.negi@bpitindia.edu.in,DHIRAJ SINGH NEGI,15320803123,Nikhil Negi,2023-2027,C,Information Technology
+15420803123,aman.raj2@bpitindia.edu.in,RAM BABU SAH,15420803123,Aman Raj,2023-2027,C,Information Technology
+15520803123,prem.raj@bpitindia.edu.in,LATE PRAMOD KUMAR SINGH,15520803123,Prem Raj,2023-2027,C,Information Technology
+75120803123,neeraj.singh@bpitindia.edu.in,RAVINDER SINGH,75120803123,Neeraj Singh,2023-2027,C,Information Technology
+75220803123,nittish@bpitindia.edu.in,AMIR CHAND,75220803123,Nittish,2023-2027,C,Information Technology
+120804923,bhumika@bpitindia.edu.in,SUSHIL GARG,120804923,Bhumika,2023-2027,EEE,Unknown
+220804923,swastika.srivastava@bpitindia.edu.in,SANDEEP KUMAR SRIVASTAVA,220804923,Swastika Srivastava,2023-2027,EEE,Unknown
+320804923,tushar.kumar2@bpitindia.edu.in,JITENDER TIWARI,320804923,Tushar Kumar,2023-2027,EEE,Unknown
+420804923,saumya.vashisht@bpitindia.edu.in,YASHPAL VASHISHT,420804923,Saumya Vashisht,2023-2027,EEE,Unknown
+520804923,rahul.thakur@bpitindia.edu.in,R S THAKUR,520804923,Rahul Thakur,2023-2027,EEE,Unknown
+620804923,tushar@bpitindia.edu.in,MAHESH KUMAR GUPTA,620804923,Tushar,2023-2027,EEE,Unknown
+720804923,gautam.saini@bpitindia.edu.in,SAMAY SINGH SAINI,720804923,Gautam Saini,2023-2027,EEE,Unknown
+820804923,rakshit.jain@bpitindia.edu.in,MANOJ KUMAR JAIN,820804923,Rakshit Jain,2023-2027,EEE,Unknown
+920804923,tanush.aggarwal@bpitindia.edu.in,NAVEEN AGGARWAL,920804923,Tanush Aggarwal,2023-2027,EEE,Unknown
+1020804923,ishagra.shrimali@bpitindia.edu.in,ARUNENDRA SHRIMALI,1020804923,Ishagra Shrimali,2023-2027,EEE,Unknown
+1120804923,vanshika.ohri@bpitindia.edu.in,PANKAJ OHRI,1120804923,Vanshika Ohri,2023-2027,EEE,Unknown
+1220804923,sourav.singh@bpitindia.edu.in,RAJESH KUMAR SINGH,1220804923,Sourav Singh,2023-2027,EEE,Unknown
+1320804923,anurag.bhardwaj@bpitindia.edu.in,BRAHM PRAKASH,1320804923,Anurag Bhardwaj,2023-2027,EEE,Unknown
+1420804923,laxmi@bpitindia.edu.in,RAJKUMAR,1420804923,Laxmi,2023-2027,EEE,Unknown
+1520804923,harsh.rana@bpitindia.edu.in,RAJINDER KUMAR,1520804923,Harsh Rana,2023-2027,EEE,Unknown
+1620804923,khushi3@bpitindia.edu.in,JOGENDER SINGH,1620804923,Khushi,2023-2027,EEE,Unknown
+1720804923,aman.tripathi@bpitindia.edu.in,RAMESH KUMAR TRIPATHI,1720804923,Aman Tripathi,2023-2027,EEE,Unknown
+1820804923,divyanshu.chaurasia@bpitindia.edu.in,DEVI PRASAD,1820804923,Divyanshu Chaurasia,2023-2027,EEE,Unknown
+1920804923,himanshu.singh@bpitindia.edu.in,SHAILENDRA KUMAR SINGH,1920804923,Himanshu Raj Singh,2023-2027,EEE,Unknown
+2020804923,ananya.kumari@bpitindia.edu.in,CHANDESHWAR PRASAD,2020804923,Ananya Kumari,2023-2027,EEE,Unknown
+2120804923,abhishek.jha@bpitindia.edu.in,SHAMBHU NATH JHA,2120804923,Abhishek Jha,2023-2027,EEE,Unknown
+2220804923,sunny.thakur@bpitindia.edu.in,SUNIL THAKUR,2220804923,Sunny Kumar Thakur,2023-2027,EEE,Unknown
+2320804923,keshav.gupta@bpitindia.edu.in,ARJUN GUPTA,2320804923,Keshav Gupta,2023-2027,EEE,Unknown
+2420804923,bipasha@bpitindia.edu.in,RAKESH,2420804923,Bipasha,2023-2027,EEE,Unknown
+2520804923,anay.jha@bpitindia.edu.in,AMIT JHA,2520804923,Anay Jha,2023-2027,EEE,Unknown
+2620804923,ankit.raj@bpitindia.edu.in,MANISH KUMAR,2620804923,Ankit Raj,2023-2027,EEE,Unknown
+2720804923,saksham.pratap@bpitindia.edu.in,DHANANJAY SINGH,2720804923,Saksham Pratap,2023-2027,EEE,Unknown
+2820804923,kanak@bpitindia.edu.in,NANDKISHOR SINGH,2820804923,Kanak,2023-2027,EEE,Unknown
+2920804923,gaurav.kumar@bpitindia.edu.in,LALIT KUMAR,2920804923,Gaurav Kumar,2023-2027,EEE,Unknown
+3020804923,ayushi.aggarwal@bpitindia.edu.in,VINOD KUMAR AGGARWAL,3020804923,Ayushi Aggarwal,2023-2027,EEE,Unknown
+3120804923,gaurav.kushwaha@bpitindia.edu.in,SATYA PRAKASH KUSHWAHA,3120804923,Gaurav Kushwaha,2023-2027,EEE,Unknown
+3220804923,shalinee.kumari@bpitindia.edu.in,ARVIND SINGH,3220804923,Shalinee Kumari,2023-2027,EEE,Unknown
+3320804923,yug.dabodiya@bpitindia.edu.in,NARESH KUAMR,3320804923,Yug Dabodiya,2023-2027,EEE,Unknown
+35120804923,sneha.sharma@bpitindia.edu.in,PANKAJ SHARMA,35120804923,Sneha Sharma,2023-2027,EEE,Unknown
+35220804923,kushagra.gaur@bpitindia.edu.in,SAMEER GAUR,35220804923,Kushagra Gaur,2023-2027,EEE,Unknown
+35320804923,jitendra.kumar@bpitindia.edu.in,SHAMBHU KUMAR,35320804923,Jitendra Kumar,2023-2027,EEE,Unknown
+70120804923,sanju.gupta@bpitindia.edu.in,JHUNNI LAL,70120804923,Sanju Gupta,2023-2027,EEE,Unknown
+70220804923,akshat.shukla@bpitindia.edu.in,ASHUTOSH SHUKLA,70220804923,Akshat Shukla,2023-2027,EEE,Unknown
+120815723,prayag.jain@bpitindia.edu.in,BHARAT JAIN,120815723,Prayag Jain,2023-2027,A,Computer Science & Engineering - Data Science
+220815723,ishita.kohli@bpitindia.edu.in,MUKUL KOHLI,220815723,Ishita Kohli,2023-2027,A,Computer Science & Engineering - Data Science
+320815723,saptangshu.datta@bpitindia.edu.in,SOUMEN DATTA,320815723,Saptangshu Datta,2023-2027,A,Computer Science & Engineering - Data Science
+420815723,dhairya.summi@bpitindia.edu.in,MANU DEV SUMMI,420815723,Dhairya Summi,2023-2027,A,Computer Science & Engineering - Data Science
+520815723,salman.khan@bpitindia.edu.in,USMAN MOHAMMAD KHAN,520815723,Salman Mohammad Khan,2023-2027,A,Computer Science & Engineering - Data Science
+620815723,akshar.jain@bpitindia.edu.in,SANJEEV JAIN,620815723,Akshar Jain,2023-2027,A,Computer Science & Engineering - Data Science
+720815723,riya.chaudhary@bpitindia.edu.in,VINOD KUMAR,720815723,Riya Chaudhary,2023-2027,A,Computer Science & Engineering - Data Science
+820815723,anju.rai@bpitindia.edu.in,DHARMATMA RAI,820815723,Anju Rai,2023-2027,A,Computer Science & Engineering - Data Science
+920815723,kriti.sharma@bpitindia.edu.in,DEEPAK SHARMA,920815723,Kriti Sharma,2023-2027,A,Computer Science & Engineering - Data Science
+1020815723,pankaj.rajbhar@bpitindia.edu.in,SANDEEP RAJBHAR,1020815723,Pankaj Rajbhar,2023-2027,A,Computer Science & Engineering - Data Science
+1120815723,maulik.vijay@bpitindia.edu.in,RAVI VIJAY,1120815723,Maulik Vijay,2023-2027,A,Computer Science & Engineering - Data Science
+1220815723,mohit.kumar@bpitindia.edu.in,RATISH KUMAR,1220815723,Mohit Kumar,2023-2027,A,Computer Science & Engineering - Data Science
+1320815723,pragyan.kumar@bpitindia.edu.in,SANJEEV KUMAR,1320815723,Pragyan Kumar,2023-2027,A,Computer Science & Engineering - Data Science
+1420815723,mannan.jain@bpitindia.edu.in,DEEPAK JAIN,1420815723,Mannan Jain,2023-2027,A,Computer Science & Engineering - Data Science
+1520815723,dular.sharma@bpitindia.edu.in,HARI SHANKAR SHARMA,1520815723,Dular Shankar Sharma,2023-2027,A,Computer Science & Engineering - Data Science
+1620815723,ishaan@bpitindia.edu.in,DEEPAK KUMAR MITTAL,1620815723,Ishaan,2023-2027,A,Computer Science & Engineering - Data Science
+1720815723,bhavika.bagaria@bpitindia.edu.in,AMARJEET SINGH,1720815723,Bhavika Kaur Bagaria,2023-2027,A,Computer Science & Engineering - Data Science
+1820815723,sidharth.singh@bpitindia.edu.in,KANHAIYA SINGH,1820815723,Sidharth Singh,2023-2027,A,Computer Science & Engineering - Data Science
+1920815723,abhishek.bajaj@bpitindia.edu.in,ARUN BAJAJ,1920815723,Abhishek Bajaj,2023-2027,A,Computer Science & Engineering - Data Science
+2020815723,abhinav.kumar@bpitindia.edu.in,NAVIN KUMAR THAKUR,2020815723,Abhinav Kumar,2023-2027,A,Computer Science & Engineering - Data Science
+2120815723,tushar.saluja@bpitindia.edu.in,RAJ KUMAR SALUJA,2120815723,Tushar Saluja,2023-2027,A,Computer Science & Engineering - Data Science
+2220815723,baljeet.narang@bpitindia.edu.in,HARPREET SINGH NARANG,2220815723,Baljeet Singh Narang,2023-2027,A,Computer Science & Engineering - Data Science
+2320815723,dhruv.sood@bpitindia.edu.in,RAJAN SOOD,2320815723,Dhruv Sood,2023-2027,A,Computer Science & Engineering - Data Science
+2420815723,hardhik.baliyan@bpitindia.edu.in,RAVINDER KUMAR,2420815723,Hardhik Baliyan,2023-2027,A,Computer Science & Engineering - Data Science
+2520815723,bhoomika.suri@bpitindia.edu.in,RAJESH SURI,2520815723,Bhoomika Suri,2023-2027,A,Computer Science & Engineering - Data Science
+2620815723,ritik@bpitindia.edu.in,AJAY,2620815723,Ritik,2023-2027,A,Computer Science & Engineering - Data Science
+2720815723,utkarsh.srivastava@bpitindia.edu.in,SANJAY SRIVASTAVA,2720815723,Utkarsh Srivastava,2023-2027,A,Computer Science & Engineering - Data Science
+2820815723,harsh.behal@bpitindia.edu.in,MADHU BHUSHAN,2820815723,Harsh Behal,2023-2027,A,Computer Science & Engineering - Data Science
+2920815723,diya.singh@bpitindia.edu.in,KUSHAL PAL SINGH,2920815723,Diya Singh,2023-2027,A,Computer Science & Engineering - Data Science
+3020815723,srijan.gupta@bpitindia.edu.in,JYOTIRMAY ANAND,3020815723,Srijan Anand Gupta,2023-2027,A,Computer Science & Engineering - Data Science
+3120815723,shreya.chauhan@bpitindia.edu.in,PUSHPENDRA KUMAR,3120815723,Shreya Chauhan,2023-2027,A,Computer Science & Engineering - Data Science
+3220815723,ujjwal.verma@bpitindia.edu.in,DEEPAK VERMA,3220815723,Ujjwal Verma,2023-2027,A,Computer Science & Engineering - Data Science
+3320815723,ujjwal2@bpitindia.edu.in,PRAVEEN KUMAR,3320815723,Ujjwal,2023-2027,A,Computer Science & Engineering - Data Science
+3420815723,aayush.jha@bpitindia.edu.in,ANIL KUMAR JHA,3420815723,Aayush Kumar Jha,2023-2027,A,Computer Science & Engineering - Data Science
+3520815723,kasak.girdhar@bpitindia.edu.in,MUKESH KUMAR,3520815723,Kasak Girdhar,2023-2027,A,Computer Science & Engineering - Data Science
+3620815723,ayush.pathak@bpitindia.edu.in,SANJEEV KUMAR PATHAK,3620815723,Ayush Kumar Pathak,2023-2027,A,Computer Science & Engineering - Data Science
+3720815723,arsheeya.sachdeva@bpitindia.edu.in,JITENDER SACHDEVA,3720815723,Arsheeya Sachdeva,2023-2027,A,Computer Science & Engineering - Data Science
+3820815723,prishita.matreja@bpitindia.edu.in,RAJAN MATREJA,3820815723,Prishita Matreja,2023-2027,A,Computer Science & Engineering - Data Science
+3920815723,shobhit.mathur@bpitindia.edu.in,VIJAY KUMAR MATHUR,3920815723,Shobhit Mathur,2023-2027,A,Computer Science & Engineering - Data Science
+4020815723,krish@bpitindia.edu.in,HARISH,4020815723,Krish,2023-2027,A,Computer Science & Engineering - Data Science
+4120815723,nakul.singh@bpitindia.edu.in,INDRAJEET SINGH,4120815723,Nakul Kumar Singh,2023-2027,A,Computer Science & Engineering - Data Science
+4220815723,sarika.mehra@bpitindia.edu.in,KAILASH SINGH,4220815723,Sarika Mehra,2023-2027,A,Computer Science & Engineering - Data Science
+4320815723,mayukh.mandal@bpitindia.edu.in,BAM SHANKER MANDAL,4320815723,Mayukh Mandal,2023-2027,A,Computer Science & Engineering - Data Science
+4420815723,lavikraj.srivastav@bpitindia.edu.in,PRAVIN KUMAR,4420815723,Lavikraj Srivastav,2023-2027,A,Computer Science & Engineering - Data Science
+4520815723,pranjal.arora@bpitindia.edu.in,GIRISH ARORA,4520815723,Pranjal Arora,2023-2027,A,Computer Science & Engineering - Data Science
+4620815723,jatin.chhabra@bpitindia.edu.in,ARUN KUMAR CHHABRA,4620815723,Jatin Chhabra,2023-2027,A,Computer Science & Engineering - Data Science
+4720815723,himanshu.shakya@bpitindia.edu.in,DEVENDER SINGH,4720815723,Himanshu Shakya,2023-2027,A,Computer Science & Engineering - Data Science
+4820815723,manasvi@bpitindia.edu.in,DHARAM RATAN,4820815723,Manasvi,2023-2027,A,Computer Science & Engineering - Data Science
+4920815723,devansh.sharma@bpitindia.edu.in,DEVENDRA SHARMA,4920815723,Devansh Sharma,2023-2027,A,Computer Science & Engineering - Data Science
+5020815723,yash.joshi@bpitindia.edu.in,SANJAY KR JOSHI,5020815723,Yash Joshi,2023-2027,A,Computer Science & Engineering - Data Science
+5120815723,aryan.srivastava2@bpitindia.edu.in,LATE SANDEEP SRIVASTAVA,5120815723,Aryan Srivastava,2023-2027,A,Computer Science & Engineering - Data Science
+5220815723,snigdha.chatterjee@bpitindia.edu.in,SWARUP CHATTERJEE,5220815723,Snigdha Chatterjee,2023-2027,A,Computer Science & Engineering - Data Science
+35120815723,shreya.garg@bpitindia.edu.in,RAJIV GARG,35120815723,Shreya Garg,2023-2027,A,Computer Science & Engineering - Data Science
+35220815723,pranav.shrivastav@bpitindia.edu.in,RANJAN KR. SRIVASTAV,35220815723,Pranav Shrivastav,2023-2027,A,Computer Science & Engineering - Data Science
+35320815723,soumya.kumar@bpitindia.edu.in,SANDEEP KUMAR,35320815723,Soumya Kumar,2023-2027,A,Computer Science & Engineering - Data Science
+35420815723,shivansh.kandwal@bpitindia.edu.in,DEEPAK KISHORE,35420815723,Shivansh Kandwal,2023-2027,A,Computer Science & Engineering - Data Science
+35520815723,daksh.yadav@bpitindia.edu.in,ASHOK YADAV,35520815723,Daksh Yadav,2023-2027,A,Computer Science & Engineering - Data Science
+35620815723,akshat.diwan@bpitindia.edu.in,SANJEEV DIWAN,35620815723,Akshat Diwan,2023-2027,A,Computer Science & Engineering - Data Science
+70120815723,ishan.kataria@bpitindia.edu.in,VINOD KATARIA,70120815723,Ishan Kataria,2023-2027,A,Computer Science & Engineering - Data Science

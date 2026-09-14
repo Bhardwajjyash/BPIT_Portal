@@ -54,7 +54,7 @@ export default function StudentLayout({ children }) {
         <div className="p-6 border-b border-slate-100 flex items-center space-x-3">
           <div className="relative w-11 h-11 rounded-xl overflow-hidden bg-white border border-slate-200 shadow-sm flex items-center justify-center p-1 flex-shrink-0">
             <Image
-              src="/logo1-1.png"
+              src="/logo1.jpeg"
               alt="BPIT Logo"
               fill
               sizes="44px"

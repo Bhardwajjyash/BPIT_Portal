@@ -1,0 +1,331 @@
+[
+  {
+    "email": "shweta.taneja@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Shweta Taneja",
+    "designation": "Associate Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "bhawna.suri@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Bhawna Suri",
+    "designation": "Associate Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "suman@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Suman",
+    "designation": "Associate Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "poonam.kathuria@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Poonam Kathuria",
+    "designation": "Associate Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "narina.thakur@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Narina Thakur",
+    "designation": "Associate Professor, Dean R&D",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "vishal.khatri@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Vishal Khatri",
+    "designation": "Assistant Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "charu.gupta@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Charu Gupta",
+    "designation": "Assistant Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "himani@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Himani",
+    "designation": "Assistant Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "mugdha.sharma@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Mugdha Sharma",
+    "designation": "Assistant Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "shobha.ray@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Shobha Tiwari Ray",
+    "designation": "Assistant Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "monika.arora@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Monika Arora",
+    "designation": "Assistant Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "palak.girdhar@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Palak Girdhar",
+    "designation": "Assistant Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "deepti.jain@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Ms. Deepti Jain",
+    "designation": "Assistant Professor",
+    "department": "Computer Science & Engineering"
+  },
+  {
+    "email": "cm.sharma@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. C.M. Sharma",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "madhur.jain@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Madhur Jain",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "aman.dureja@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Aman Dureja",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "ritu.gupta@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Ritu Gupta",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "varsha.sharma@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Varsha Sharma",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "shailendra.gaur@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Shailendra Singh Gaur",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "pooja.mudgil@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Pooja Mudgil",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "pooja.sapra@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Pooja Sapra",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "meenakshi.aggarwal@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Meenakshi Aggarwal",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "priyanka.singla@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Priyanka Singla",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "yogita@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Yogita",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "rajni.sharma@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Ms. Rajni Sharma",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "anshika.negi@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Mrs. Anshika Negi",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "abhimanyu.verma@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Mr. Abhimanyu Verma",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "aditi.dwivedi@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Ms. Aditi Dwivedi",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "neetu@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Mrs. Neetu",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "sashwat.shukla@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Mr. Sashwat Ranjan Shukla",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "sakshi.agrawal@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Mrs. Sakshi Agrawal",
+    "designation": "Assistant Professor",
+    "department": "Information Technology"
+  },
+  {
+    "email": "komal.bhagat@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Komal Mehta Bhagat",
+    "designation": "Associate Professor",
+    "department": "Electronics & Communication Engineering"
+  },
+  {
+    "email": "akash.rathee@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Akash Rathee",
+    "designation": "Associate Professor",
+    "department": "Electronics & Communication Engineering"
+  },
+  {
+    "email": "sandeep.sharma@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Sandeep Sharma",
+    "designation": "Assistant Professor",
+    "department": "Electronics & Communication Engineering"
+  },
+  {
+    "email": "megha.aggarwal@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Megha Aggarwal",
+    "designation": "Assistant Professor",
+    "department": "Electronics & Communication Engineering"
+  },
+  {
+    "email": "jayant.bhardwaj@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Dr. Jayant Bhardwaj",
+    "designation": "Assistant Professor",
+    "department": "Electronics & Communication Engineering"
+  },
+  {
+    "email": "dinesh.bhardwaj@bpitindia.edu.in",
+    "passwordHash": "pass123",
+    "name": "Mr. Dinesh Kumar Bhardwaj",
+    "designation": "Assistant Professor",
+    "department": "Electronics & Communication Engineering"
+  },
+  {
+    "email": "sanjay.upreti@bpitindia.edu.in",
+    "name": "Dr. Sanjay Upreti",
+    "designation": "Assistant Professor",
+    "department": "Electrical & Electronics Engineering",
+    "passwordHash": "pass123"
+  },
+  {
+    "email": "shikha.gupta@bpitindia.edu.in",
+    "name": "Dr. Shikha Gupta",
+    "designation": "Assistant Professor",
+    "department": "Electrical & Electronics Engineering",
+    "passwordHash": "pass123"
+  },
+  {
+    "email": "ruchika.mittal@bpitindia.edu.in",
+    "name": "Dr. Ruchika Mittal",
+    "designation": "Assistant Professor",
+    "department": "Electrical & Electronics Engineering",
+    "passwordHash": "pass123"
+  },
+  {
+    "email": "hemant.rajput@bpitindia.edu.in",
+    "name": "Mr. Hemant Kumar Rajput",
+    "designation": "Assistant Professor",
+    "department": "Electrical & Electronics Engineering",
+    "passwordHash": "pass123"
+  },
+  {
+    "email": "shalini.mishra@bpitindia.edu.in",
+    "name": "Ms. Shalini Sharma Mishra",
+    "designation": "Assistant Professor",
+    "department": "Electrical & Electronics Engineering",
+    "passwordHash": "pass123"
+  },
+  {
+    "email": "puneet.dixit@bpitindia.edu.in",
+    "name": "Mr. Puneet Dixit",
+    "designation": "Assistant Professor",
+    "department": "Electrical & Electronics Engineering",
+    "passwordHash": "pass123"
+  },
+  {
+    "email": "prashant.nigam@bpitindia.edu.in",
+    "name": "Mr. Prashant Nigam",
+    "designation": "Assistant Professor",
+    "department": "Electrical & Electronics Engineering",
+    "passwordHash": "pass123"
+  },
+  {
+    "email": "rohini.sharma@bpitindia.edu.in",
+    "name": "Ms. Rohini Sharma",
+    "designation": "Assistant Professor",
+    "department": "Electrical & Electronics Engineering",
+    "passwordHash": "pass123"
+  },
+  {
+    "email": "bs.pali@bpitindia.edu.in",
+    "name": "Dr. B.S. Pali",
+    "designation": "Assistant Professor",
+    "department": "Electrical & Electronics Engineering",
+    "passwordHash": "pass123"
+  },
+  {
+    "email": "nitish.pathak@bpitindia.edu.in",
+    "name": "Dr. Nitish Pathak",
+    "designation": "Associate Professor",
+    "department": "Computer Science & Engineering - Data Science",
+    "passwordHash": "pass123"
+  }
+]

@@ -23,7 +23,7 @@ export default function AdminLoginPage() {
         <div className="flex flex-col items-center text-center mb-8">
           <div className="relative mb-4 w-34 h-14 rounded-xl overflow-hidden bg-white/80 backdrop-blur-sm border border-slate-200/60 shadow-sm flex items-center justify-center p-1 flex-shrink-0">
             <Image 
-              src="/logo1-1.png" 
+              src="/logo1.jpeg" 
               alt="BPIT Logo" 
               fill 
               sizes="(max-width: 768px) 100vw, 150px" 

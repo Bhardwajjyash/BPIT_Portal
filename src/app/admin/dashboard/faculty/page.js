@@ -2,7 +2,7 @@ import { prisma } from "@/lib/db";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image"; // 1. Import Image component
+import Image from "next/image";
 import { 
   Users, 
   Mail, 
@@ -16,10 +16,23 @@ import {
 
 export default async function ManageMentorsPage() {
   const cookieStore = await cookies();
-  if (!cookieStore.get('adminId')?.value) redirect('/admin/login');
+  const adminId = cookieStore.get('adminId')?.value;
+  if (!adminId) redirect('/admin/login');
 
-  // Fetch all faculty, count their students, and pull profilePic & statuses
+  // 1. Fetch Admin to get department scope
+  const admin = await prisma.admin.findUnique({
+    where: { id: adminId },
+    select: { departmentName: true }
+  });
+
+  // 2. Build where clause for department filtering
+  const filterClause = admin?.departmentName 
+    ? { departmentName: admin.departmentName } 
+    : {};
+
+  // 3. Fetch scoped faculty with their respective counts
   const rawMentors = await prisma.faculty.findMany({
+    where: filterClause,
     include: {
       _count: {
         select: { students: true }
@@ -136,7 +149,8 @@ export default async function ManageMentorsPage() {
                   </div>
                   <div className="flex items-center gap-2 text-sm font-medium text-slate-600">
                     <Building2 className="w-4 h-4 text-slate-400" />
-                    {mentor.department || 'Unassigned Dept'}
+                    {/* 🔧 FIX: Changed to mentor.departmentName */}
+                    {mentor.departmentName || 'Unassigned Dept'}
                   </div>
                 </div>
 

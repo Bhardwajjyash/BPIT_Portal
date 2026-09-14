@@ -12,7 +12,7 @@ import {
   ShieldAlert,
   ClipboardList
 } from "lucide-react";
-import AdminProfileAvatar from "@/components/AdminProfileAvatar"; // <-- Import added
+import AdminProfileAvatar from "@/components/AdminProfileAvatar";
 
 export default async function AdminDashboardPage() {
   const cookieStore = await cookies();
@@ -24,7 +24,6 @@ export default async function AdminDashboardPage() {
     where: { id: adminId }
   });
 
-  // Enhanced Error State matching the portal theme
   if (!admin) {
     return (
       <div className="flex items-center justify-center min-h-[50vh] p-8">
@@ -37,23 +36,33 @@ export default async function AdminDashboardPage() {
     );
   }
 
-  // Extract initials for the avatar
   const initials = admin.name
     ? admin.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()
     : 'AD';
 
-  // Global System Stats
-  const totalStudents = await prisma.student.count();
-  const totalMentors = await prisma.faculty.count();
+  // 1. Build the dynamic department filters
+  const isGlobalAdmin = !admin.departmentName;
+  
+  // Filter for direct relations (Students, Faculty)
+  const deptFilter = isGlobalAdmin ? {} : { departmentName: admin.departmentName };
+  
+  // Filter for nested relations (Achievements belong to students in this department)
+  const nestedStudentFilter = isGlobalAdmin ? {} : { student: { departmentName: admin.departmentName } };
 
-  // Helper function to efficiently fetch counts across all models for a specific status
+  // 2. Apply filters to the counts
+  const totalStudents = await prisma.student.count({ where: deptFilter });
+  const totalMentors = await prisma.faculty.count({ where: deptFilter });
+
+  // 3. Apply filters to the achievement status counts
   const getStatusTotal = async (status) => {
+    const baseWhere = { status, ...nestedStudentFilter };
+    
     const counts = await Promise.all([
-      prisma.project.count({ where: { status } }),
-      prisma.extraCurricular.count({ where: { status } }),
-      prisma.coCurricular.count({ where: { status } }),
-      prisma.certification.count({ where: { status } }),
-      prisma.researchPaper.count({ where: { status } })
+      prisma.project.count({ where: baseWhere }),
+      prisma.extraCurricular.count({ where: baseWhere }),
+      prisma.coCurricular.count({ where: baseWhere }),
+      prisma.certification.count({ where: baseWhere }),
+      prisma.researchPaper.count({ where: baseWhere })
     ]);
     return counts.reduce((acc, curr) => acc + curr, 0);
   };
@@ -63,7 +72,6 @@ export default async function AdminDashboardPage() {
   const rejectedCount = await getStatusTotal('REJECTED');
   const totalRequests = pendingCount + approvedCount + rejectedCount;
 
-  // Reusable Stat Card Component matching the Faculty View
   const StatCard = ({ icon: Icon, label, count, colorClass, borderClass }) => (
     <div className={`bg-slate-50 rounded-xl p-5 border ${borderClass} flex flex-col hover:shadow-md transition-all duration-200`}>
       <div className="flex items-center gap-3 mb-3">
@@ -78,30 +86,24 @@ export default async function AdminDashboardPage() {
 
   return (
     <div className="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
-      {/* Header Section */}
       <div className="mb-8 flex items-center space-x-4">
-        
-        {/* --- DYNAMIC ADMIN AVATAR --- */}
         <AdminProfileAvatar 
           currentPic={admin.profilePic} 
           initials={initials} 
           name={admin.name} 
         />
-        
         <div>
           <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">Admin Profile</h1>
-          <p className="text-slate-500 font-medium mt-1">Manage department details and global statistics.</p>
+          <p className="text-slate-500 font-medium mt-1">
+            {isGlobalAdmin ? 'Manage global college statistics.' : `Manage statistics for ${admin.departmentName}.`}
+          </p>
         </div>
       </div>
       
-      {/* Main Content Card */}
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        {/* Decorative top border */}
         <div className="h-1 bg-gradient-to-r from-indigo-500 to-purple-500 w-full"></div>
         
         <div className="p-6 sm:p-8">
-          
-          {/* --- SECTION 1: Personal Details --- */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
               <p className="text-xs font-bold tracking-wider text-slate-500 uppercase mb-1">Full Name</p>
@@ -124,19 +126,18 @@ export default async function AdminDashboardPage() {
               <p className="text-xs font-bold tracking-wider text-slate-500 uppercase mb-1">Department</p>
               <span className="inline-flex items-center text-slate-900 font-semibold text-lg">
                 <Building2 className="w-5 h-5 mr-2 text-slate-400" />
-                {admin.department || 'Not specified'}
+                {/* 🔧 FIX: Updated to departmentName */}
+                {admin.departmentName || 'All Departments (Global)'} 
               </span>
             </div>
           </div>
 
-          {/* --- SECTION 2: Department Overview --- */}
           <div className="mt-8 pt-8 border-t border-slate-100">
             <h2 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
               <Activity className="w-5 h-5 text-indigo-600" />
-              Department Global Overview
+              {isGlobalAdmin ? 'Global Overview' : 'Department Overview'}
             </h2>
 
-            {/* Global Stats Information Block */}
             <div className="mb-6 bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="flex gap-8">
                 <div>
@@ -155,10 +156,9 @@ export default async function AdminDashboardPage() {
                 </div>
               </div>
               
-              {/* Grand Total Submissions Block */}
               <div className="sm:text-right flex items-center sm:block pt-4 sm:pt-0 border-t sm:border-t-0 sm:border-l border-slate-200 sm:pl-6">
                 <div className="hidden sm:block">
-                  <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">All Submissions Tracked</p>
+                  <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">All Submissions</p>
                 </div>
                 <div className="flex items-center sm:justify-end gap-3 text-slate-900">
                   <ClipboardList className="w-6 h-6 text-slate-700" />
@@ -167,33 +167,30 @@ export default async function AdminDashboardPage() {
               </div>
             </div>
 
-            {/* Detailed Status Breakdown Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <StatCard 
                 icon={Clock} 
-                label="Global Pending" 
+                label="Pending" 
                 count={pendingCount} 
                 colorClass="bg-amber-100 text-amber-600" 
                 borderClass="border-amber-200"
               />
               <StatCard 
                 icon={CheckCircle2} 
-                label="Global Approved" 
+                label="Approved" 
                 count={approvedCount} 
                 colorClass="bg-emerald-100 text-emerald-600" 
                 borderClass="border-emerald-200"
               />
               <StatCard 
                 icon={XCircle} 
-                label="Global Rejected" 
+                label="Rejected" 
                 count={rejectedCount} 
                 colorClass="bg-rose-100 text-rose-600" 
                 borderClass="border-rose-200"
               />
             </div>
-
           </div>
-
         </div>
       </div>
     </div>

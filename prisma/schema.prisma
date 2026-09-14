@@ -3,8 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-
+  provider = "mysql"
 }
 
 enum VerificationStatus {
@@ -14,16 +13,30 @@ enum VerificationStatus {
 }
 
 // ----------------------------------------
+// 0. DEPARTMENT HUB (NEW)
+// ----------------------------------------
+model Department {
+  name       String    @id // e.g., "Information Technology", "Computer Science & Engineering"
+  
+  admins     Admin[]
+  faculties  Faculty[]
+  students   Student[]
+}
+
+// ----------------------------------------
 // 1. FACULTY / MENTOR MODEL
 // ----------------------------------------
 model Faculty {
-  id             String          @id @default(uuid())
-  email          String          @unique
+  id             String        @id @default(uuid())
+  email          String        @unique
   passwordHash   String
   name           String
-  designation    String?         // e.g., Assistant Professor
-  department     String? 
-  profilePic     String?        // e.g., IT
+  designation    String?       // e.g., Assistant Professor
+  profilePic     String?       
+  
+  // Foreign Key linking to Department
+  departmentName String?
+  department     Department?   @relation(fields: [departmentName], references: [name])
   
   // The students assigned to this mentor
   students       Student[]     
@@ -36,21 +49,25 @@ model Faculty {
 // 2. STUDENT MODEL
 // ----------------------------------------
 model Student {
-  id               String   @id @default(uuid())
-  email            String   @unique
+  id               String          @id @default(uuid())
+  email            String          @unique
   passwordHash     String
-  enrollmentNo     String?  @unique
+  enrollmentNo     String?         @unique
   name             String
-  batch            String?  // e.g., 2023-27
-  section          String?  // e.g., A
+  batch            String?         // e.g., 2023-27
+  section          String?         // e.g., A
   semester         Int?
   parentName       String?
   address          String?
   profilePic       String?
 
+  // Foreign Key linking to Department
+  departmentName   String?
+  department       Department?     @relation(fields: [departmentName], references: [name])
+
   // Mentor-Mentee Relationship
   mentorId         String?
-  mentor           Faculty? @relation(fields: [mentorId], references: [id])
+  mentor           Faculty?        @relation(fields: [mentorId], references: [id])
 
   // Relations to Achievements
   extraCurriculars ExtraCurricular[]
@@ -160,7 +177,7 @@ model Project {
   type            String   // Web Dev, Mobile App, Research
   description     String
   techStack       String   // Comma separated string from your interactive tags
-  githubLink      String?  // Added from your recent frontend update
+  githubLink      String?  
   dateFrom        DateTime
   dateTo          DateTime
   teamMembers     String?
@@ -199,8 +216,8 @@ model ResearchPaper {
   rejectionReason String?
   
   // File Uploads
-  proofUrl        String?  // Optional/Required based on your logic
-  photoUrl        String?  // Optional Event/Paper Photo
+  proofUrl        String?  
+  photoUrl        String?  
   
   status          VerificationStatus @default(PENDING)
   verifiedLogs    VerifiedLog[]
@@ -217,7 +234,6 @@ model VerifiedLog {
   remarks            String?
   verifiedAt         DateTime @default(now())
 
-  // Optional relations to whichever item was verified
   extraCurricularId  String?
   extraCurricular    ExtraCurricular? @relation(fields: [extraCurricularId], references: [id])
   
@@ -238,12 +254,15 @@ model VerifiedLog {
 // 5. ADMIN / HOD MODEL
 // ----------------------------------------
 model Admin {
-  id           String   @id @default(uuid())
-  email        String   @unique
-  passwordHash String
-  name         String
-  role         String   @default("HOD") // e.g., Head of Department
-  department   String?  // e.g., IT
-  profilePic   String?
-  createdAt    DateTime @default(now())
+  id             String      @id @default(uuid())
+  email          String      @unique
+  passwordHash   String
+  name           String
+  role           String      @default("HOD")
+  profilePic     String?
+  createdAt      DateTime    @default(now())
+
+  // Foreign Key linking to Department
+  departmentName String?
+  department     Department? @relation(fields: [departmentName], references: [name])
 }

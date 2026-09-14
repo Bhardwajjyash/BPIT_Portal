@@ -8,12 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@prisma/adapter-mariadb": "^7.10.0",
     "@prisma/adapter-pg": "^7.9.0",
     "@prisma/client": "^7.9.0",
     "cloudinary": "^2.10.0",
+    "csv-parse": "^7.0.2",
     "exceljs": "^4.4.0",
     "lucide-react": "^1.28.0",
+    "mariadb": "^3.5.4",
     "next": "16.2.11",
+    "pdf-parse": "^2.4.5",
     "pg": "^8.22.0",
     "react": "19.2.4",
     "react-avatar-editor": "^15.1.0",

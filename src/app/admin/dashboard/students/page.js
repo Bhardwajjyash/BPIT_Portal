@@ -4,18 +4,36 @@ import { redirect } from "next/navigation";
 import { Users } from "lucide-react";
 import { adminAssignMentor } from "@/app/actions";
 import ExportButton from "@/components/ExportButton";
-import Image from "next/image"; // 1. Import Next.js Image component
+import Image from "next/image";
 
 export default async function AllStudentsPage() {
   const cookieStore = await cookies();
-  if (!cookieStore.get('adminId')?.value) redirect('/admin/login');
+  const adminId = cookieStore.get('adminId')?.value;
+  
+  if (!adminId) redirect('/admin/login');
 
+  // 1. Fetch the logged-in admin to get their exact department
+  const currentAdmin = await prisma.admin.findUnique({
+    where: { id: adminId },
+    select: { departmentName: true }
+  });
+
+  // 2. Create the department filter (remains empty for General Admin)
+  let filterClause = {};
+  if (currentAdmin && currentAdmin.departmentName) {
+    filterClause = { departmentName: currentAdmin.departmentName };
+  }
+
+  // 3. Fetch scoped students
   const students = await prisma.student.findMany({
+    where: filterClause,
     include: { mentor: true },
     orderBy: { name: 'asc' }
   });
 
+  // 4. Fetch scoped mentors for the dropdown
   const mentors = await prisma.faculty.findMany({
+    where: filterClause,
     orderBy: { name: 'asc' }
   });
 
@@ -24,6 +42,13 @@ export default async function AllStudentsPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">All Students</h1>
         <p className="text-slate-600 font-medium mt-1">Manage all students and their mentor assignments globally.</p>
+        
+        {/* Optional: Show the admin which department they are viewing */}
+        {currentAdmin?.departmentName && (
+          <span className="inline-block mt-3 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-100">
+            {currentAdmin.departmentName}
+          </span>
+        )}
       </div>
 
       <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
@@ -40,7 +65,6 @@ export default async function AllStudentsPage() {
             </thead>
             <tbody className="divide-y divide-slate-100">
               {students.map((student) => {
-                // Generate initials fallback in case profilePic is null
                 const initials = student.name
                   ? student.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()
                   : 'ST';
@@ -49,8 +73,6 @@ export default async function AllStudentsPage() {
                   <tr key={student.id} className="hover:bg-slate-50/50 transition-colors">
                     <td className="p-4">
                       <div className="flex items-center gap-3">
-                        
-                        {/* --- DYNAMIC STUDENT PROFILE PICTURE OR INITIALS --- */}
                         <div className="relative w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm shadow-sm overflow-hidden flex-shrink-0 border border-slate-100">
                           {student.profilePic ? (
                             <Image 

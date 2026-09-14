@@ -7,7 +7,6 @@ import {
   Mail,
   ArrowRight,
   BadgeCheck,
-  Sparkles,
   Activity,
   Lock,
 } from "lucide-react";
@@ -78,7 +77,7 @@ export default function HomeLandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
           <div className="flex items-center gap-4">
             <div className="relative w-12 h-12 bg-white rounded-xl shadow-sm ring-1 ring-slate-900/5 p-1 flex items-center justify-center">
-              <Image src="/logo1-1.png" alt="BPIT Logo" fill className="object-contain p-1.5" priority />
+              <Image src="/logo1.jpeg" alt="BPIT Logo" fill className="object-contain p-1.5" priority />
             </div>
             <div>
               <h1 className="text-xl font-extrabold tracking-tight leading-none text-slate-900">BPIT</h1>
@@ -87,8 +86,6 @@ export default function HomeLandingPage() {
               </p>
             </div>
           </div>
-
-         
         </div>
       </nav>
 
@@ -96,16 +93,12 @@ export default function HomeLandingPage() {
       <main className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex flex-col items-center justify-center pt-25 pb-18">
         {/* Hero */}
         <section className="text-center max-w-3xl mx-auto mb-14">
-          
-
           <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-slate-900 leading-[1.1]">
             Academic Achievement <br />
             <span className="bg-gradient-to-r from-indigo-700 to-indigo-500 bg-clip-text text-transparent">
               Management System
             </span>
           </h2>
-
-          
 
           {/* Highlight pills */}
           <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
@@ -123,13 +116,12 @@ export default function HomeLandingPage() {
 
         {/* Portals */}
         <section className="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
-          {portals.map(({ href, label, desc, icon: Icon, ring, iconBg, iconText, iconBorder, ctaText, ctaHover }) => (
+          {portals.map(({ href, label, icon: Icon, ring, iconBg, iconText, iconBorder, ctaText, ctaHover }) => (
             <Link
               key={href}
               href={href}
               className="group relative bg-white/50 backdrop-blur-2xl border border-white rounded-2xl p-7 shadow-lg shadow-slate-200/50 hover:-translate-y-1.5 hover:bg-white/80 hover:shadow-xl hover:shadow-slate-300/40 transition-all duration-300 overflow-hidden flex flex-col items-center text-center"
             >
-              {/* soft gradient ring on hover */}
               <div
                 className={`pointer-events-none absolute -inset-px rounded-2xl bg-gradient-to-br ${ring} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
               />
@@ -141,7 +133,6 @@ export default function HomeLandingPage() {
               </div>
 
               <h3 className="text-xl font-bold text-slate-900 mb-2">{label}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed mb-6">{desc}</p>
 
               <div
                 className={`mt-auto flex items-center text-sm font-bold ${ctaText} bg-white px-5 py-2.5 rounded-xl border border-slate-200 shadow-sm relative ${ctaHover} transition-colors`}
@@ -154,45 +145,65 @@ export default function HomeLandingPage() {
       </main>
 
       {/* --- FOOTER --- */}
-      <footer className="relative z-10 w-full bg-white/60 backdrop-blur-2xl border-t border-white py-4 mt-auto">
+      <footer className="relative z-10 w-full bg-white/60 backdrop-blur-2xl border-t border-white py-5 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col xl:flex-row items-center justify-between gap-6">
           <div className="text-sm font-semibold text-slate-500 text-center xl:text-left">
             &copy; {new Date().getFullYear()} Bhagwan Parshuram Institute of Technology. <br className="hidden xl:block" />
             All rights reserved.
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <span className="text-sm font-semibold text-slate-600 hidden sm:block">Developed by:</span>
+          <div className="flex flex-col items-center xl:items-end gap-3.5">
+            {/* Developers Row */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider hidden sm:block">Developed by:</span>
 
-            {[
-              { name: "Yash Bhardwaj", li: "bhardwajjyash", mail: "yashbhardwajj01@gmail.com" },
-              { name: "Janit Berwal", li: "janit-berwal", mail: "janit.berwal@gmail.com" },
-            ].map((dev, i) => (
-              <div key={dev.name} className="flex items-center gap-6">
-                <div className="flex items-center gap-3">
-                  <span className="text-sm font-bold text-slate-900">{dev.name}</span>
-                  <div className="flex items-center gap-2">
-                    <a
-                      href={`https://linkedin.com/in/${dev.li}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:border-indigo-200 transition-all shadow-sm"
-                      title={`${dev.name.split(" ")[0]}'s LinkedIn`}
-                    >
-                      <FaLinkedin className="w-4 h-4" />
-                    </a>
-                    <a
-                      href={`mailto:${dev.mail}`}
-                      className="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-slate-900 hover:border-slate-400 transition-all shadow-sm"
-                      title={`${dev.name.split(" ")[0]}'s Email`}
-                    >
-                      <Mail className="w-4 h-4" />
-                    </a>
+              {[
+                { name: "Yash Bhardwaj", li: "bhardwajjyash", mail: "yashbhardwajj01@gmail.com" },
+                { name: "Janit Berwal", li: "janit-berwal", mail: "janit.berwal@gmail.com" },
+              ].map((dev, i) => (
+                <div key={dev.name} className="flex items-center gap-4 sm:gap-6">
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-bold text-slate-900">{dev.name}</span>
+                    <div className="flex items-center gap-2">
+                      <a
+                        href={`https://linkedin.com/in/${dev.li}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:border-indigo-200 transition-all shadow-sm"
+                        title={`${dev.name.split(" ")[0]}'s LinkedIn`}
+                      >
+                        <FaLinkedin className="w-4 h-4" />
+                      </a>
+                      <a
+                        href={`mailto:${dev.mail}`}
+                        className="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-slate-900 hover:border-slate-400 transition-all shadow-sm"
+                        title={`${dev.name.split(" ")[0]}'s Email`}
+                      >
+                        <Mail className="w-4 h-4" />
+                      </a>
+                    </div>
                   </div>
+                  {i === 0 && <div className="hidden sm:block w-px h-5 bg-slate-300" />}
                 </div>
-                {i === 0 && <div className="hidden sm:block w-px h-6 bg-slate-300" />}
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Supervisors Row */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider hidden sm:block">Supervised by:</span>
+
+              {[
+                { name: "Manoj Kumar Gupta" },
+                { name: "Aman Dureja" },
+              ].map((supervisor, i) => (
+                <div key={supervisor.name} className="flex items-center gap-4 sm:gap-6">
+                  <span className="text-sm font-bold text-slate-800 bg-slate-100/70 border border-slate-200/80 px-3 py-1 rounded-lg">
+                    {supervisor.name}
+                  </span>
+                  {i === 0 && <div className="hidden sm:block w-px h-5 bg-slate-300" />}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </footer>
