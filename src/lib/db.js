@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 
-// Provide a dummy string so Next.js doesn't crash during static analysis
+// Fallback prevents "Invalid URL" crash during Vercel's build trace
 const connectionString = process.env.DATABASE_URL || "mysql://dummy:dummy@localhost:3306/dummy";
 const dbUrl = new URL(connectionString);
 
@@ -15,9 +15,7 @@ const adapter = new PrismaMariaDb({
 
 const globalForPrisma = globalThis;
 
-// Prevent multiple instances of Prisma Client in development
-export const prisma =
-  globalForPrisma.prisma || new PrismaClient({ adapter });
+export const prisma = globalForPrisma.prisma || new PrismaClient({ adapter });
 
 if (process.env.NODE_ENV !== 'production') {
   globalForPrisma.prisma = prisma;

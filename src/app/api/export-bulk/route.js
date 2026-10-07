@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
+import ExcelJS from "exceljs";
 
-// Force Next.js to skip all static optimizations
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
-export const fetchCache = 'force-no-store';
 
 export async function GET(request) {
   const cookieStore = await cookies();
@@ -73,14 +72,6 @@ export async function GET(request) {
       },
       orderBy: { name: 'asc' }
     });
-
-    // ------------------------------------------------------------------------
-    // ULTIMATE TURBOPACK BYPASS
-    // Splitting the string prevents AST parsers from reading the import.
-    // ------------------------------------------------------------------------
-    const libName = "ex" + "celjs";
-    const ExcelJSModule = await import(libName);
-    const ExcelJS = ExcelJSModule.default || ExcelJSModule;
 
     const workbook = new ExcelJS.Workbook();
     workbook.creator = "Portal System";

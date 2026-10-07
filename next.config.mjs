@@ -11,7 +11,7 @@ const nextConfig = {
       },
     ],
   },
-  // THIS TELLS NEXT.JS TURBOPACK TO IGNORE EXCELJS DURING BUILD
+  // THIS TELLS NEXT.JS TO COMPLETELY IGNORE EXCELJS DURING BUILD
   serverExternalPackages: ['exceljs'],
 };
 
