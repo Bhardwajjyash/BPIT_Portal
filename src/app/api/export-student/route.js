@@ -5,6 +5,9 @@ import { prisma } from "@/lib/db";
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
+// VERCEL DEPLOYMENT FORCED UPDATE - OCT 7
+console.log("Forcing Git to recognize this commit");
+
 export async function GET(request) {
   const cookieStore = await cookies();
   const adminId = cookieStore.get("adminId")?.value;
