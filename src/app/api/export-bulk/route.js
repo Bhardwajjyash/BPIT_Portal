@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
-import ExcelJS from "exceljs";
 
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
@@ -72,6 +71,15 @@ export async function GET(request) {
       },
       orderBy: { name: 'asc' }
     });
+
+    // ------------------------------------------------------------------------
+    // ULTIMATE TURBOPACK BYPASS
+    // Using `new Function` completely hides the library from the build compiler.
+    // Next.js cannot statically evaluate this, forcing it to compile successfully.
+    // ------------------------------------------------------------------------
+    const getExcelJS = new Function("return import('exceljs')");
+    const ExcelJSModule = await getExcelJS();
+    const ExcelJS = ExcelJSModule.default || ExcelJSModule;
 
     const workbook = new ExcelJS.Workbook();
     workbook.creator = "Portal System";
@@ -198,6 +206,8 @@ export async function GET(request) {
         { header: 'Position', key: 'position', width: 15 },
         { header: 'Max Marks/Grade', key: 'maxMarksGrade', width: 15 },
         { header: 'Marks Obtained', key: 'marksObtained', width: 15 },
+        { header: 'Start Date', key: 'dateFrom', width: 15 },
+        { header: 'End Date', key: 'dateTo', width: 15 },
         { header: 'Duration', key: 'duration', width: 15 },
         { header: 'Learnings', key: 'learnings', width: 40 },
         { header: 'Sponsored By', key: 'sponsored', width: 15 },
