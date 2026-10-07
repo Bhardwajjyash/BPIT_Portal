@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
-import ExcelJS from "exceljs";
+
 export const dynamic = 'force-dynamic';
 
 export async function GET(request) {
@@ -44,7 +44,11 @@ export async function GET(request) {
       return NextResponse.json({ error: "Student record not found in database." }, { status: 404 });
     }
 
-    // 4. Initialize Excel Workbook
+    // 4. Lazy-load ExcelJS to prevent Next.js build crashes
+    const ExcelJSModule = await import("exceljs");
+    const ExcelJS = ExcelJSModule.default || ExcelJSModule;
+
+    // Initialize Excel Workbook
     const workbook = new ExcelJS.Workbook();
     workbook.creator = "Portal System";
     workbook.created = new Date();

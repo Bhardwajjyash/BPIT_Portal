@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
-import ExcelJS from "exceljs";
 
 export const dynamic = 'force-dynamic';
 
@@ -74,6 +73,12 @@ export async function GET(request) {
       },
       orderBy: { name: 'asc' }
     });
+
+    // ------------------------------------------------------------------------
+    // LAZY LOAD EXCELJS (This fixes the Vercel build error)
+    // ------------------------------------------------------------------------
+    const ExcelJSModule = await import("exceljs");
+    const ExcelJS = ExcelJSModule.default || ExcelJSModule;
 
     const workbook = new ExcelJS.Workbook();
     workbook.creator = "Portal System";
