@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
 
+// 1. Force Next.js to treat this as a live server route
 export const dynamic = 'force-dynamic';
 
 export async function GET(request) {
@@ -9,11 +10,11 @@ export async function GET(request) {
   const adminId = cookieStore.get("adminId")?.value;
   const facultyId = cookieStore.get("facultyId")?.value;
 
+  // 2. Build-safe URL parsing
   const { searchParams } = new URL(request.url || 'http://localhost');
   const role = searchParams.get("role");
   const type = searchParams.get("type") || "summary";
   
-  // Supports both the direct query params and the new filter UI
   const filterType = searchParams.get("filterType"); 
   const filterValue = searchParams.get("filterValue");
   const section = searchParams.get("section");
@@ -36,7 +37,6 @@ export async function GET(request) {
       personName = admin?.name || "HOD";
       isRoleAdmin = true;
       
-      // Apply Filters
       if (filterType === 'section' && filterValue) {
         whereClause.section = filterValue;
         filterTitle = `Section: ${filterValue}`;
@@ -48,7 +48,6 @@ export async function GET(request) {
         whereClause.id = { in: studentIds };
         filterTitle = `Custom Student Selection`;
       } else {
-        // Fallback to basic params
         if (section) { whereClause.section = section; filterTitle = `Section: ${section}`; }
         if (enrollmentNo) { whereClause.enrollmentNo = enrollmentNo; filterTitle = `Student: ${enrollmentNo}`; }
         if (filterMentorId) { whereClause.mentorId = filterMentorId; filterTitle = `Mentor: ${filterMentorId}`; }
@@ -74,9 +73,7 @@ export async function GET(request) {
       orderBy: { name: 'asc' }
     });
 
-    // ------------------------------------------------------------------------
-    // LAZY LOAD EXCELJS (This fixes the Vercel build error)
-    // ------------------------------------------------------------------------
+    // 3. Lazy-load ExcelJS ONLY when the route runs (bypasses build crash)
     const ExcelJSModule = await import("exceljs");
     const ExcelJS = ExcelJSModule.default || ExcelJSModule;
 
@@ -84,11 +81,7 @@ export async function GET(request) {
     workbook.creator = "Portal System";
     workbook.created = new Date();
 
-    // ------------------------------------------------------------------------
-    // DETAILED EXPORT LOGIC (5 Sheets)
-    // ------------------------------------------------------------------------
     if (type === 'detailed') {
-      
       const createBulkSheet = (name, title, dataExtractor, activityColumns) => {
         const sheet = workbook.addWorksheet(name);
         
@@ -104,7 +97,6 @@ export async function GET(request) {
           sheet.getColumn(index + 1).key = col.key;
         });
 
-        // College Headers
         sheet.mergeCells(1, 1, 1, columns.length);
         sheet.getCell('A1').value = 'Bhagwan Parshuram Institute of Technology';
         sheet.getCell('A1').font = { bold: true, size: 14 };
@@ -132,7 +124,6 @@ export async function GET(request) {
           cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF4F46E5' } };
         });
 
-        // Insert Student Data Rows
         students.forEach(student => {
           const activities = dataExtractor(student);
           if (activities && activities.length > 0) {
@@ -235,11 +226,7 @@ export async function GET(request) {
         { header: 'DOI URL', key: 'doiUrl', width: 30 },
         { header: 'Document URL', key: 'proofUrl', width: 30 }
       ]);
-    } 
-    // ------------------------------------------------------------------------
-    // ORIGINAL SUMMARY LOGIC
-    // ------------------------------------------------------------------------
-    else {
+    } else {
       const sheet = workbook.addWorksheet("Activity Summary");
       const columns = [
         { header: 'S.No', key: 'sno', width: 8 },

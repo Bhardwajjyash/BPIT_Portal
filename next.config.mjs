@@ -11,7 +11,7 @@ const nextConfig = {
       },
     ],
   },
-  // Add this block to fix the ExcelJS evaluation error
+  // THIS TELLS NEXT.JS TURBOPACK TO IGNORE EXCELJS DURING BUILD
   serverExternalPackages: ['exceljs'],
 };
 
