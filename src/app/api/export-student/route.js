@@ -46,7 +46,7 @@ export async function GET(request) {
     // THE FIX: CommonJS require() inside the function
     // This stops the Turbopack build crash for the student route.
     // ------------------------------------------------------------------------
-    const ExcelJS = require("exceljs");
+    const ExcelJS = (await import("exceljs")).default;
 
     const workbook = new ExcelJS.Workbook();
     workbook.creator = "Portal System";

@@ -81,7 +81,7 @@ export async function GET(request) {
     // By using require() inside the function instead of import(), Turbopack 
     // skips evaluating this module during the static build phase.
     // ------------------------------------------------------------------------
-    const ExcelJS = require("exceljs");
+    const ExcelJS = (await import("exceljs")).default;
 
     const workbook = new ExcelJS.Workbook();
     workbook.creator = "Portal System";
