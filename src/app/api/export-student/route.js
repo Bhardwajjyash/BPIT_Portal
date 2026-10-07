@@ -2,7 +2,10 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
 
+// Force Next.js to skip all static optimizations
 export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+export const fetchCache = 'force-no-store';
 
 export async function GET(request) {
   const cookieStore = await cookies();
@@ -10,12 +13,10 @@ export async function GET(request) {
   const facultyId = cookieStore.get("facultyId")?.value;
   const studentIdCookie = cookieStore.get("userId")?.value;
 
-  // 1. Verify Authentication
   if (!adminId && !facultyId && !studentIdCookie) {
     return NextResponse.json({ error: "Unauthorized access" }, { status: 401 });
   }
 
-  // 2. Determine Target Student
   const { searchParams } = new URL(request.url || 'http://localhost');
   let targetStudentId = searchParams.get("studentId");
 
@@ -28,7 +29,6 @@ export async function GET(request) {
   }
 
   try {
-    // 3. Fetch ONLY APPROVED student data
     const student = await prisma.student.findUnique({
       where: { id: targetStudentId },
       include: {
@@ -44,51 +44,43 @@ export async function GET(request) {
       return NextResponse.json({ error: "Student record not found in database." }, { status: 404 });
     }
 
-    // 4. Lazy-load ExcelJS to prevent Next.js build crashes
-    const ExcelJSModule = await import("exceljs");
+    // ------------------------------------------------------------------------
+    // ULTIMATE TURBOPACK BYPASS
+    // ------------------------------------------------------------------------
+    const libName = "ex" + "celjs";
+    const ExcelJSModule = await import(libName);
     const ExcelJS = ExcelJSModule.default || ExcelJSModule;
 
-    // Initialize Excel Workbook
     const workbook = new ExcelJS.Workbook();
     workbook.creator = "Portal System";
     workbook.created = new Date();
 
-    // --- Helper function to create uniquely formatted sheets ---
     const createSheet = (name, title, data, columns, studentInfo) => {
       const sheet = workbook.addWorksheet(name);
 
-      // Set column properties (without headers to avoid auto-filling row 1)
       columns.forEach((col, index) => {
         sheet.getColumn(index + 1).width = col.width || 20;
-        sheet.getColumn(index + 1).key = col.key; // Keep key for mapping data later
+        sheet.getColumn(index + 1).key = col.key;
       });
 
-      // Row 1: College Name
       sheet.mergeCells(1, 1, 1, columns.length);
       const row1 = sheet.getCell(1, 1);
       row1.value = 'Bhagwan Parshuram Institute of Technology';
       row1.font = { bold: true, size: 14 };
       row1.alignment = { horizontal: 'center' };
 
-      // Row 2: Department
       sheet.mergeCells(2, 1, 2, columns.length);
       const row2 = sheet.getCell(2, 1);
       row2.value = 'Department of Information Technology';
       row2.font = { bold: true, size: 12 };
       row2.alignment = { horizontal: 'center' };
 
-      // Row 3: Empty automatically
-
-      // Row 4: Sheet Specific Title
       sheet.mergeCells(4, 1, 4, columns.length);
       const row4 = sheet.getCell(4, 1);
       row4.value = title;
       row4.font = { bold: true, size: 12 };
       row4.alignment = { horizontal: 'center' };
 
-      // Row 5: Empty automatically
-
-      // Row 6: Student Info (Matching your image structure)
       sheet.getCell('A6').value = 'Batch:';
       sheet.getCell('A6').font = { bold: true };
       sheet.getCell('B6').value = studentInfo.batch || 'N/A';
@@ -105,18 +97,14 @@ export async function GET(request) {
       sheet.getCell('J6').font = { bold: true };
       sheet.getCell('K6').value = studentInfo.name || 'N/A';
 
-      // Row 7: Empty automatically
-
-      // Row 8: Table Headers
       const headerRow = sheet.getRow(8);
       columns.forEach((col, index) => {
         const cell = headerRow.getCell(index + 1);
         cell.value = col.header;
-        cell.font = { bold: true, color: { argb: 'FFFFFFFF' } }; // White Text
-        cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF4F46E5' } }; // Indigo Background
+        cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
+        cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF4F46E5' } };
       });
 
-      // Data Rows (Starting from Row 9)
       if (data && data.length > 0) {
         data.forEach((item) => {
           const rowData = {};
@@ -127,8 +115,6 @@ export async function GET(request) {
         });
       }
     };
-
-    // --- Create Sheets with ALL Database Fields & Formatting ---
     
     createSheet("Projects", "Details of Participation on Projects", student.projects, [
       { header: 'Project Name', key: 'projectName', width: 25 },
@@ -228,10 +214,8 @@ export async function GET(request) {
       { header: 'Photo URL', key: 'photoUrl', width: 30 }
     ], student);
 
-    // 5. Generate and send the file
     const buffer = await workbook.xlsx.writeBuffer();
     
-    // Format filename safely
     const safeName = (student.name || 'student').replace(/[^a-z0-9]/gi, '_').toLowerCase();
     const filename = `${safeName}_archive_LATEST.xlsx`;
 
