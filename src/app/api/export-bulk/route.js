@@ -2,14 +2,18 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
 
+// 1. Force dynamic execution and explicit Node.js runtime
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
+
+console.log("Applying require() fix for exceljs in bulk export");
 
 export async function GET(request) {
   const cookieStore = await cookies();
   const adminId = cookieStore.get("adminId")?.value;
   const facultyId = cookieStore.get("facultyId")?.value;
 
+  // 2. Build-safe URL
   const { searchParams } = new URL(request.url || 'http://localhost');
   const role = searchParams.get("role");
   const type = searchParams.get("type") || "summary";
@@ -73,13 +77,11 @@ export async function GET(request) {
     });
 
     // ------------------------------------------------------------------------
-    // ULTIMATE TURBOPACK BYPASS
-    // Using `new Function` completely hides the library from the build compiler.
-    // Next.js cannot statically evaluate this, forcing it to compile successfully.
+    // THE FIX: CommonJS require()
+    // By using require() inside the function instead of import(), Turbopack 
+    // skips evaluating this module during the static build phase.
     // ------------------------------------------------------------------------
-    const getExcelJS = new Function("return import('exceljs')");
-    const ExcelJSModule = await getExcelJS();
-    const ExcelJS = ExcelJSModule.default || ExcelJSModule;
+    const ExcelJS = require("exceljs");
 
     const workbook = new ExcelJS.Workbook();
     workbook.creator = "Portal System";
@@ -206,8 +208,6 @@ export async function GET(request) {
         { header: 'Position', key: 'position', width: 15 },
         { header: 'Max Marks/Grade', key: 'maxMarksGrade', width: 15 },
         { header: 'Marks Obtained', key: 'marksObtained', width: 15 },
-        { header: 'Start Date', key: 'dateFrom', width: 15 },
-        { header: 'End Date', key: 'dateTo', width: 15 },
         { header: 'Duration', key: 'duration', width: 15 },
         { header: 'Learnings', key: 'learnings', width: 40 },
         { header: 'Sponsored By', key: 'sponsored', width: 15 },
