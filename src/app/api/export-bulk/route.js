@@ -10,7 +10,7 @@ export async function GET(request) {
   const adminId = cookieStore.get("adminId")?.value;
   const facultyId = cookieStore.get("facultyId")?.value;
 
-  const { searchParams } = new URL(request.url);
+  const { searchParams } = new URL(request.url || 'http://localhost');
   const role = searchParams.get("role");
   const type = searchParams.get("type") || "summary";
   
