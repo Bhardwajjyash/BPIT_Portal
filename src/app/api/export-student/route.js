@@ -16,7 +16,7 @@ export async function GET(request) {
   }
 
   // 2. Determine Target Student
-  const { searchParams } = new URL(request.url);
+  const { searchParams } = new URL(request.url || 'http://localhost');
   let targetStudentId = searchParams.get("studentId");
 
   if (!targetStudentId) {

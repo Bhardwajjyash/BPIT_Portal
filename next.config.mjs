@@ -11,6 +11,8 @@ const nextConfig = {
       },
     ],
   },
+  // Add this block to fix the ExcelJS evaluation error
+  serverExternalPackages: ['exceljs'],
 };
 
 export default nextConfig;
