@@ -5,9 +5,6 @@ import { prisma } from "@/lib/db";
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
-// VERCEL DEPLOYMENT FORCED UPDATE - OCT 7
-console.log("Forcing Git to recognize this commit");
-
 export async function GET(request) {
   const cookieStore = await cookies();
   const adminId = cookieStore.get("adminId")?.value;
@@ -46,11 +43,10 @@ export async function GET(request) {
     }
 
     // ------------------------------------------------------------------------
-    // ULTIMATE TURBOPACK BYPASS
+    // THE FIX: CommonJS require() inside the function
+    // This stops the Turbopack build crash for the student route.
     // ------------------------------------------------------------------------
-    const getExcelJS = new Function("return import('exceljs')");
-    const ExcelJSModule = await getExcelJS();
-    const ExcelJS = ExcelJSModule.default || ExcelJSModule;
+    const ExcelJS = require("exceljs");
 
     const workbook = new ExcelJS.Workbook();
     workbook.creator = "Portal System";
