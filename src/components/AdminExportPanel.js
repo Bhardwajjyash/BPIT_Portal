@@ -108,7 +108,10 @@ export default function AdminExportPanel() {
                 <div className="flex items-center justify-between bg-indigo-50 border border-indigo-200 p-2 rounded-lg">
                   <div className="flex flex-col">
                     <span className="text-sm font-bold text-indigo-700 truncate">{selectedMentor.name}</span>
-                    <span className="text-xs text-indigo-500">{selectedMentor.department}</span>
+                    {/* 🔧 FIX: Safely render departmentName instead of the department object */}
+                    <span className="text-xs text-indigo-500">
+                      {selectedMentor.departmentName || (selectedMentor.department && selectedMentor.department.name) || 'Unknown Dept'}
+                    </span>
                   </div>
                   <button onClick={() => setSelectedMentor(null)} className="p-1 hover:bg-indigo-200 rounded">
                     <X className="w-4 h-4 text-indigo-600" />

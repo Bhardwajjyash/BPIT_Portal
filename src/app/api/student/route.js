@@ -1,14 +1,13 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
-// Import your session checker utility here
+import { prisma } from '@/lib/db'; 
 // import { getCurrentAdminSession } from '@/lib/session'; 
 
-const prisma = new PrismaClient();
 export const dynamic = 'force-dynamic';
 
 export async function GET(request) {
   try {
     // 1. Get the currently logged-in HOD/Admin session
+    // WARNING: This will crash at runtime if getCurrentAdminSession is not imported/defined
     const admin = await getCurrentAdminSession(); 
 
     if (!admin) {

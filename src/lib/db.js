@@ -1,7 +1,9 @@
 import { PrismaClient } from '@prisma/client';
 import { PrismaMariaDb } from '@prisma/adapter-mariadb';
 
-const dbUrl = new URL(process.env.DATABASE_URL);
+// Provide a dummy string so Next.js doesn't crash during static analysis
+const connectionString = process.env.DATABASE_URL || "mysql://dummy:dummy@localhost:3306/dummy";
+const dbUrl = new URL(connectionString);
 
 const adapter = new PrismaMariaDb({
   host: dbUrl.hostname,

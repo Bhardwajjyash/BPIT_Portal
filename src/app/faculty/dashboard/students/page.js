@@ -21,7 +21,7 @@ export default async function ManageStudentsPage({ searchParams }) {
 
   // 2. Fetch search result if query exists
   let searchResult = null;
-  if (searchQuery.length === 11) {
+  if (searchQuery.length === 10 ) {
     searchResult = await prisma.student.findUnique({
       where: { enrollmentNo: searchQuery }
     });
@@ -45,9 +45,9 @@ export default async function ManageStudentsPage({ searchParams }) {
               type="text" 
               name="query"
               defaultValue={searchQuery}
-              pattern="[0-9]{11}"
+              pattern="[0-9]{10}"
               placeholder="e.g 08220803123" 
-              className="placeholder:text-slate-600 w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500 outline-none transition-all text-sm font-medium"
+              className="placeholder:text-slate-400 w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500 outline-none transition-all text-sm font-medium"
             />
           </div>
           <button type="submit" className="px-8 py-3 text-sm font-bold text-slate-700 bg-slate-100 rounded-xl hover:bg-slate-200 transition-colors">

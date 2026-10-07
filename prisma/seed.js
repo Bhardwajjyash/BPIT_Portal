@@ -19,12 +19,45 @@ const prisma = new PrismaClient({ adapter });
 async function main() {
   console.log('🚀 Starting database seeding...');
 
-  // 1. Seed Faculty Data
-  console.log('📂 Reading faculty_portal_2.json...');
+  // Read files first to extract departments
   const facultyPath = path.join(__dirname, 'faculty_portal.json');
   const facultyContent = fs.readFileSync(facultyPath, 'utf8');
   const facultyList = JSON.parse(facultyContent);
 
+  const studentPath = path.join(__dirname, 'students_portal_cleaned.csv');
+  const studentContent = fs.readFileSync(studentPath, 'utf8');
+  const records = parse(studentContent, { columns: true, skip_empty_lines: true, trim: true });
+
+  // 0. SEED DEPARTMENTS FIRST
+  console.log('🏗️ Extracting and Seeding Departments...');
+  const departments = new Set();
+  
+  // Extract from Faculty
+  for (const fac of facultyList) {
+    if (fac.department) departments.add(fac.department);
+  }
+  
+  // Extract from Students (and default logic)
+  departments.add('Computer Science & Engineering');
+  departments.add('Electrical & Electronics Engineering');
+  for (const row of records) {
+    if (row.department && row.department !== 'Unknown') {
+      departments.add(row.department);
+    }
+  }
+
+  // Insert Departments into Database
+  for (const deptName of departments) {
+    await prisma.department.upsert({
+      where: { name: deptName },
+      update: {},
+      create: { name: deptName }
+    });
+  }
+  console.log(`✅ Successfully seeded ${departments.size} departments!`);
+
+  // 1. Seed Faculty Data
+  console.log('📂 Seeding Faculty Data...');
   let facCount = 0;
   for (const fac of facultyList) {
     await prisma.faculty.upsert({
@@ -48,11 +81,7 @@ async function main() {
   console.log(`✅ Successfully seeded ${facCount} faculty accounts!`);
 
   // 2. Seed Student Data
-  console.log('📂 Reading students_portal_cleaned.csv...');
-  const studentPath = path.join(__dirname, 'students_portal_cleaned.csv');
-  const studentContent = fs.readFileSync(studentPath, 'utf8');
-  const records = parse(studentContent, { columns: true, skip_empty_lines: true, trim: true });
-
+  console.log('📂 Seeding Student Data...');
   let stdCount = 0;
   for (const row of records) {
     const name = row.name || 'Unknown Student';
