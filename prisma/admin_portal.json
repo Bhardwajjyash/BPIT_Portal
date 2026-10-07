@@ -1,0 +1,51 @@
+[
+    {
+      "email": "payal.pahwa@bpitindia.edu.in",
+      "passwordHash": "pass123",
+      "name": "Dr. Payal Pahwa",
+      "role": "PRINCIPAL",
+      "department": null
+    },
+    {
+      "email": "achal.kaushik@bpitindia.edu.in",
+      "passwordHash": "pass123",
+      "name": "Dr. Achal Kaushik",
+      "role": "HOD",
+      "department": "Computer Science & Engineering"
+    },
+    {
+      "email": "manoj.gupta@bpitindia.edu.in",
+      "passwordHash": "pass123",
+      "name": "Prof. Manoj Kumar Gupta",
+      "role": "HOD",
+      "department": "Information Technology"
+    },
+    {
+      "email": "rajiv.sharma@bpitindia.edu.in",
+      "passwordHash": "pass123",
+      "name": "Prof. (Dr.) Rajiv Sharma",
+      "role": "HOD",
+      "department": "Electronics & Communication Engineering"
+    },
+    {
+      "email": "peeyush.pant@bpitindia.edu.in",
+      "passwordHash": "pass123",
+      "name": "Dr. Peeyush Pant",
+      "role": "HOD",
+      "department": "Electrical & Electronics Engineering"
+    },
+    {
+      "email": "monika.arora@bpitindia.edu.in",
+      "passwordHash": "pass123",
+      "name": "Dr. Monika Arora",
+      "role": "INCHARGE",
+      "department": "Computer Science & Engineering - Data Science"
+    },
+    {
+      "email": "admin@bpitindia.edu.in",
+      "passwordHash": "admin123",
+      "name": "Global System Admin",
+      "role": "SUPERADMIN",
+      "department": null
+    }
+  ]
