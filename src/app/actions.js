@@ -16,7 +16,7 @@ export async function loginUser(prevState,formData) {
   const student = await prisma.student.findUnique({ where: { email } });
 
   if (!student || student.passwordHash !== password) {
-    return { error: "Invalid email or password. Please contact Developer." };
+    return { error: "Invalid email or password." };
   }
 
   const cookieStore = await cookies();
@@ -39,7 +39,7 @@ export async function loginFaculty(prevState,formData) {
   const faculty = await prisma.faculty.findUnique({ where: { email } });
 
   if (!faculty || faculty.passwordHash !== password) {
-    return { error: "Invalid email or password. Please contact Developer." };
+    return { error: "Invalid email or password." };
   }
 
   const cookieStore = await cookies();
@@ -695,7 +695,7 @@ export async function loginAdmin(prevState,formData) {
   const admin = await prisma.admin.findUnique({ where: { email } });
 
   if (!admin || admin.passwordHash !== password) {
-    return { error: "Invalid email or password. Please contact Developer." };
+    return { error: "Invalid email or password." };
   }
 
   const cookieStore = await cookies();
