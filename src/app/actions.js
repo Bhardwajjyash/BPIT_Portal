@@ -9,14 +9,14 @@ import { uploadToCloudinary } from "@/lib/cloudinary"; // Cloudinary utility
 // ----------------------------------------
 // 1. AUTHENTICATION ACTIONS (Student & Faculty)
 // ----------------------------------------
-export async function loginUser(formData) {
+export async function loginUser(prevState,formData) {
   const email = formData.get('email');
   const password = formData.get('password');
 
   const student = await prisma.student.findUnique({ where: { email } });
 
   if (!student || student.passwordHash !== password) {
-    throw new Error("Invalid email or password. Please contact administration.");
+    return { error: "Invalid email or password. Please contact Developer." };
   }
 
   const cookieStore = await cookies();
@@ -32,14 +32,14 @@ export async function logoutUser() {
   redirect('/');
 }
 
-export async function loginFaculty(formData) {
+export async function loginFaculty(prevState,formData) {
   const email = formData.get('email');
   const password = formData.get('password');
 
   const faculty = await prisma.faculty.findUnique({ where: { email } });
 
   if (!faculty || faculty.passwordHash !== password) {
-    throw new Error("Invalid faculty credentials.");
+    return { error: "Invalid email or password. Please contact Developer." };
   }
 
   const cookieStore = await cookies();
@@ -688,14 +688,14 @@ export async function updateAndResubmitProject(formData) {
   }
 }
 // Add these to src/app/actions.js
-export async function loginAdmin(formData) {
+export async function loginAdmin(prevState,formData) {
   const email = formData.get('email');
   const password = formData.get('password');
 
   const admin = await prisma.admin.findUnique({ where: { email } });
 
   if (!admin || admin.passwordHash !== password) {
-    throw new Error("Invalid admin credentials.");
+    return { error: "Invalid email or password. Please contact Developer." };
   }
 
   const cookieStore = await cookies();

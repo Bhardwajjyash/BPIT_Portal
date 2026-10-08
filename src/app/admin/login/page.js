@@ -1,8 +1,13 @@
-import { loginAdmin } from "@/app/actions";
+"use client";
+import { useActionState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { loginAdmin } from "@/app/actions";
+import { AlertCircle } from "lucide-react";
 
 export default function AdminLoginPage() {
+  const [state, formAction, isPending] = useActionState(loginAdmin, null);
+  
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8 bg-slate-50 overflow-hidden">
       
@@ -50,7 +55,16 @@ export default function AdminLoginPage() {
               <p className="text-slate-500 text-sm font-medium mt-1">Manage institute and faculty settings</p>
             </div>
             
-            <form action={loginAdmin} className="space-y-5">
+            {/* ✅ Error Box Moved Here: Above the form inputs */}
+            {state?.error && (
+              <div className="mb-6 p-3 bg-rose-50 border border-rose-200 text-rose-700 text-sm font-bold rounded-xl flex items-center gap-2 shadow-sm animate-in fade-in slide-in-from-top-2">
+                <AlertCircle className="w-5 h-5 shrink-0" />
+                {state.error}
+              </div>
+            )}
+            
+            {/* ✅ EXACTLY ONE FORM TAG connected to formAction */}
+            <form action={formAction} className="space-y-5">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                   Admin Email
@@ -77,21 +91,23 @@ export default function AdminLoginPage() {
                 />
               </div>
 
+              {/* Added disabled states while loading */}
               <button 
                 type="submit" 
-                className="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white transition-all bg-blue-600 rounded-xl hover:bg-blue-700 shadow-sm hover:shadow-md hover:shadow-blue-600/20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 mt-2"
+                disabled={isPending}
+                className="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white transition-all bg-blue-600 rounded-xl hover:bg-blue-700 shadow-sm hover:shadow-md hover:shadow-blue-600/20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Sign In to Admin Portal
+                {isPending ? "Signing In..." : "Sign In to Admin Portal"}
               </button>
             </form>
 
             {/* Optional Redirect Link */}
             <div className="mt-6 pt-5 border-t border-slate-100 text-center">
               <Link 
-                href="/" 
+                href="/login" 
                 className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors"
               >
-                &larr; Back to Main Site
+                &larr; Back to Student Login
               </Link>
             </div>
           </div>

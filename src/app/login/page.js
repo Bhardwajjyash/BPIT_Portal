@@ -1,8 +1,13 @@
+"use client";
 import { loginUser } from "@/app/actions";
 import Image from "next/image";
 import Link from "next/link";
+import { AlertCircle } from "lucide-react"; 
+import { useActionState } from "react";
 
 export default function LoginPage() {
+  const [state, formAction, isPending] = useActionState(loginUser, null);
+
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8 bg-slate-50 overflow-hidden">
       
@@ -50,7 +55,16 @@ export default function LoginPage() {
               <p className="text-slate-500 text-sm font-medium mt-1">Sign in with your institutional credentials</p>
             </div>
             
-            <form action={loginUser} className="space-y-5">
+            {/* ✅ Error Box Moved Here: Above the form inputs */}
+            {state?.error && (
+              <div className="mb-6 p-3 bg-rose-50 border border-rose-200 text-rose-700 text-sm font-bold rounded-xl flex items-center gap-2 shadow-sm animate-in fade-in slide-in-from-top-2">
+                <AlertCircle className="w-5 h-5 shrink-0" />
+                {state.error}
+              </div>
+            )}
+
+            {/* ✅ EXACTLY ONE FORM TAG connected to formAction */}
+            <form action={formAction} className="space-y-5">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                   Email Address <span className="text-rose-600">*</span>
@@ -77,11 +91,13 @@ export default function LoginPage() {
                 />
               </div>
 
+              {/* Added disabled states while loading */}
               <button 
                 type="submit" 
-                className="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white transition-all bg-indigo-600 rounded-xl hover:bg-indigo-700 hover:shadow-md hover:shadow-indigo-600/20 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 mt-2"
+                disabled={isPending}
+                className="w-full inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white transition-all bg-indigo-600 rounded-xl hover:bg-indigo-700 hover:shadow-md hover:shadow-indigo-600/20 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Sign In
+                {isPending ? "Signing In..." : "Sign In"}
               </button>
             </form>
 
