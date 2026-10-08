@@ -94,7 +94,7 @@ export default function HomeLandingPage() {
         {/* Hero */}
         <section className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-slate-900 leading-[1.1]">
-            Academic Achievement <br />
+            Student Achievement <br />
             <span className="bg-gradient-to-r from-indigo-700 to-indigo-500 bg-clip-text text-transparent">
               Management System
             </span>
