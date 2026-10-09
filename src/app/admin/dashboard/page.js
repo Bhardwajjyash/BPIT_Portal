@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
 import { redirect } from "next/navigation";
+import ChangePasswordForm from "@/components/ChangePasswordForm";
 import { 
   Users, 
   GraduationCap, 
@@ -190,6 +191,7 @@ export default async function AdminDashboardPage() {
                 borderClass="border-rose-200"
               />
             </div>
+            <ChangePasswordForm />
           </div>
         </div>
       </div>

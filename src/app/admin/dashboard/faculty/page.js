@@ -13,6 +13,7 @@ import {
   Clock,
   XCircle 
 } from "lucide-react";
+import BulkUploadModal from "@/components/BulkUploadModal";
 
 export default async function ManageMentorsPage() {
   const cookieStore = await cookies();
@@ -93,7 +94,7 @@ export default async function ManageMentorsPage() {
           Add New Mentor
         </Link>
       </div>
-
+      <BulkUploadModal type="faculty" />
       {!mentors || mentors.length === 0 ? (
         <div className="flex flex-col items-center justify-center bg-slate-50 border-2 border-dashed border-slate-300 rounded-2xl p-12 text-center">
           <div className="bg-white p-4 rounded-full shadow-sm mb-4 border border-slate-200">

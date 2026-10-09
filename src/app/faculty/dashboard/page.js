@@ -9,6 +9,7 @@ import {
   ClipboardList
 } from "lucide-react";
 import FacultyProfileAvatar from "@/components/FacultyProfileAvatar"; // <-- Import added
+import ChangePasswordForm from "@/components/ChangePasswordForm";
 
 export default async function FacultyProfilePage() {
   // 1. Get the current faculty's ID from their session cookie
@@ -192,7 +193,7 @@ export default async function FacultyProfilePage() {
                 borderClass="border-rose-200"
               />
             </div>
-
+            <ChangePasswordForm />
           </div>
 
         </div>

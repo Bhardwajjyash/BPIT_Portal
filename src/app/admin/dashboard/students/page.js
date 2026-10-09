@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Users, Search, Filter, XCircle } from "lucide-react";
 import { adminAssignMentor } from "@/app/actions";
 import ExportButton from "@/components/ExportButton";
+import BulkUploadModal from "@/components/BulkUploadModal";
 
 export default async function AllStudentsPage({ searchParams }) {
   const cookieStore = await cookies();
@@ -73,7 +74,7 @@ export default async function AllStudentsPage({ searchParams }) {
           </span>
         )}
       </div>
-
+      <BulkUploadModal type="student" />
       {/* --- SEARCH AND FILTER BAR --- */}
       <form method="GET" className="bg-white p-4 rounded-2xl shadow-sm border border-slate-200 mb-6 flex flex-col sm:flex-row gap-3 items-center">
         

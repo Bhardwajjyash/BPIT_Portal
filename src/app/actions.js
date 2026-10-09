@@ -850,3 +850,177 @@ export async function updateAdminProfilePicture(imageUrl) {
   
   return { success: true };
 }
+// --- ADD TO THE BOTTOM OF src/app/actions.js ---
+
+// 10. EXCEL UPLOAD ACTIONS
+export async function uploadStudentsExcel(prevState, formData) {
+  const cookieStore = await cookies();
+  if (!cookieStore.get('adminId')?.value) return { error: "Unauthorized" };
+
+  const file = formData.get('file');
+  if (!file || file.size === 0) return { error: "No file uploaded." };
+
+  try {
+    const buffer = await file.arrayBuffer();
+    // Dynamic import to prevent Next.js build issues
+    const ExcelJS = (await import("exceljs")).default;
+    const workbook = new ExcelJS.Workbook();
+    await workbook.xlsx.load(Buffer.from(buffer));
+
+    const worksheet = workbook.worksheets[0];
+    const rows = [];
+    
+    // Skip header row (assuming row 1 is headers)
+    worksheet.eachRow((row, rowNumber) => {
+      if (rowNumber > 1) {
+        // Expected columns: Name(1), EnrollmentNo(2), FatherName(3), Email(4), Section(5), Batch(6), Department(7)
+        rows.push({
+          name: row.getCell(1).value?.toString().trim() || '',
+          enrollmentNo: row.getCell(2).value?.toString().trim() || '',
+          parentName: row.getCell(3).value?.toString().trim() || '',
+          email: row.getCell(4).value?.toString().trim() || '',
+          section: row.getCell(5).value?.toString().trim() || 'A',
+          batch: row.getCell(6).value?.toString().trim() || '2023-2027',
+          departmentName: row.getCell(7).value?.toString().trim() || 'Information Technology',
+        });
+      }
+    });
+
+    let importedCount = 0;
+    for (const r of rows) {
+      if (!r.name || !r.enrollmentNo) continue;
+
+      // HOD Requirement: Password is Father's Name all caps (fallback to ENROLLMENT if empty)
+// HOD Requirement: Password is Father's Name all caps with spaces (fallback to ENROLLMENT if empty)
+const rawFatherName = r.parentName ? r.parentName : r.enrollmentNo;
+const defaultPassword = rawFatherName.toUpperCase();
+      
+      const safeEmail = r.email || `${r.enrollmentNo.toLowerCase()}@bpitindia.edu.in`;
+
+      await prisma.student.upsert({
+        where: { email: safeEmail },
+        update: { 
+          name: r.name, 
+          enrollmentNo: r.enrollmentNo, 
+          parentName: r.parentName, 
+          section: r.section, 
+          batch: r.batch, 
+          departmentName: r.departmentName 
+        },
+        create: { 
+          name: r.name, 
+          email: safeEmail, 
+          enrollmentNo: r.enrollmentNo, 
+          parentName: r.parentName, 
+          passwordHash: defaultPassword, 
+          section: r.section, 
+          batch: r.batch, 
+          departmentName: r.departmentName 
+        }
+      });
+      importedCount++;
+    }
+
+    revalidatePath('/admin/dashboard/students');
+    return { success: `Successfully imported ${importedCount} students.` };
+  } catch (error) {
+    console.error("Excel Parsing Error:", error);
+    return { error: "Failed to parse Excel file. Ensure the format is correct." };
+  }
+}
+
+export async function uploadFacultyExcel(prevState, formData) {
+  const cookieStore = await cookies();
+  if (!cookieStore.get('adminId')?.value) return { error: "Unauthorized" };
+
+  const file = formData.get('file');
+  if (!file || file.size === 0) return { error: "No file uploaded." };
+
+  try {
+    const buffer = await file.arrayBuffer();
+    const ExcelJS = (await import("exceljs")).default;
+    const workbook = new ExcelJS.Workbook();
+    await workbook.xlsx.load(Buffer.from(buffer));
+
+    const worksheet = workbook.worksheets[0];
+    const rows = [];
+    
+    worksheet.eachRow((row, rowNumber) => {
+      if (rowNumber > 1) {
+        // Expected columns: Name(1), Email(2), Designation(3), Department(4)
+        rows.push({
+          name: row.getCell(1).value?.toString().trim() || '',
+          email: row.getCell(2).value?.toString().trim() || '',
+          designation: row.getCell(3).value?.toString().trim() || 'Assistant Professor',
+          departmentName: row.getCell(4).value?.toString().trim() || 'Information Technology',
+        });
+      }
+    });
+
+    let importedCount = 0;
+    for (const r of rows) {
+      if (!r.name || !r.email) continue;
+
+      // Default generic password for faculty until they change it
+      const defaultPassword = "FACULTY" + new Date().getFullYear();
+
+      await prisma.faculty.upsert({
+        where: { email: r.email },
+        update: { 
+          name: r.name, 
+          designation: r.designation, 
+          departmentName: r.departmentName 
+        },
+        create: { 
+          name: r.name, 
+          email: r.email, 
+          passwordHash: defaultPassword, 
+          designation: r.designation, 
+          departmentName: r.departmentName 
+        }
+      });
+      importedCount++;
+    }
+
+    revalidatePath('/admin/dashboard/faculty');
+    return { success: `Successfully imported ${importedCount} mentors.` };
+  } catch (error) {
+    return { error: "Failed to parse Excel file." };
+  }
+}
+
+// 11. UNIVERSAL CHANGE PASSWORD ACTION
+export async function changePassword(prevState, formData) {
+  const cookieStore = await cookies();
+  const studentId = cookieStore.get('userId')?.value;
+  const facultyId = cookieStore.get('facultyId')?.value;
+  const adminId = cookieStore.get('adminId')?.value;
+
+  const oldPassword = formData.get('oldPassword');
+  const newPassword = formData.get('newPassword');
+  const confirmPassword = formData.get('confirmPassword');
+
+  if (newPassword !== confirmPassword) return { error: "New passwords do not match." };
+
+  try {
+    if (studentId) {
+      const user = await prisma.student.findUnique({ where: { id: studentId } });
+      if (user.passwordHash !== oldPassword) return { error: "Incorrect current password." };
+      await prisma.student.update({ where: { id: studentId }, data: { passwordHash: newPassword } });
+    } else if (facultyId) {
+      const user = await prisma.faculty.findUnique({ where: { id: facultyId } });
+      if (user.passwordHash !== oldPassword) return { error: "Incorrect current password." };
+      await prisma.faculty.update({ where: { id: facultyId }, data: { passwordHash: newPassword } });
+    } else if (adminId) {
+      const user = await prisma.admin.findUnique({ where: { id: adminId } });
+      if (user.passwordHash !== oldPassword) return { error: "Incorrect current password." };
+      await prisma.admin.update({ where: { id: adminId }, data: { passwordHash: newPassword } });
+    } else {
+      return { error: "Authentication required." };
+    }
+    
+    return { success: "Password updated successfully!" };
+  } catch (error) {
+    return { error: "Failed to update password." };
+  }
+}

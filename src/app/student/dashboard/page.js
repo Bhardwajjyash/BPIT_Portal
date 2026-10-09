@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import ExportButton from "@/components/ExportButton";
 import ProfileAvatar from "@/components/ProfileAvatar";
+import ChangePasswordForm from "@/components/ChangePasswordForm";
 
 export default async function StudentProfile() {
   // 1. Get the current user's ID from their session cookie
@@ -239,7 +240,7 @@ export default async function StudentProfile() {
                 colorClass="bg-rose-100 text-rose-600" 
               />
             </div>
-
+            <ChangePasswordForm />
           </div>
 
         </div>
