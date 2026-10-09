@@ -5,6 +5,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { uploadToCloudinary } from "@/lib/cloudinary"; // Cloudinary utility
+import nodemailer from 'nodemailer';
 
 // ----------------------------------------
 // 1. AUTHENTICATION ACTIONS (Student & Faculty)
@@ -1022,5 +1023,62 @@ export async function changePassword(prevState, formData) {
     return { success: "Password updated successfully!" };
   } catch (error) {
     return { error: "Failed to update password." };
+  }
+}
+export async function processForgotPassword(prevState, formData) {
+  const email = formData.get('email');
+  const role = formData.get('role'); // 'student', 'faculty', or 'admin'
+
+  try {
+    let user = null;
+    
+    // 1. Verify the user exists based on their role
+    if (role === 'student') {
+      user = await prisma.student.findUnique({ where: { email } });
+    } else if (role === 'faculty') {
+      user = await prisma.faculty.findUnique({ where: { email } });
+    } else if (role === 'admin') {
+      user = await prisma.admin.findUnique({ where: { email } });
+    }
+
+    if (!user) {
+      return { error: "No account found with this email." };
+    }
+
+    // 2. Generate a simple temporary password
+    const tempPassword = Math.random().toString(36).slice(-8); // e.g., 'a7b8c9d0'
+
+    // 3. Update the database with the temporary password
+    if (role === 'student') {
+      await prisma.student.update({ where: { email }, data: { passwordHash: tempPassword } });
+    } else if (role === 'faculty') {
+      await prisma.faculty.update({ where: { email }, data: { passwordHash: tempPassword } });
+    } else if (role === 'admin') {
+      await prisma.admin.update({ where: { email }, data: { passwordHash: tempPassword } });
+    }
+
+    // 4. Set up Nodemailer to send the email
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'your.college.project@gmail.com', // Replace with your Gmail
+        pass: 'YOUR_GOOGLE_APP_PASSWORD'        // Replace with your 16-letter App Password
+      }
+    });
+
+    const mailOptions = {
+      from: '"BPIT S.A.M.S Support" <your.college.project@gmail.com>',
+      to: email,
+      subject: 'Password Reset Request',
+      text: `Hello ${user.name},\n\Your password has been reset. Your temporary password is: ${tempPassword}\n\nPlease login and change it immediately using the Account Security section on your dashboard.`,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    return { success: "A temporary password has been sent to your email!" };
+
+  } catch (error) {
+    console.error("Forgot Password Error:", error);
+    return { error: "Failed to process request. Please try again." };
   }
 }

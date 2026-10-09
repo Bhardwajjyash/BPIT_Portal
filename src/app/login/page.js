@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { loginUser } from "@/app/actions";
 import { AlertCircle, Eye, EyeOff } from "lucide-react"; 
+import ForgotPasswordModal from "@/components/ForgotPasswordModal";
 
 export default function LoginPage() {
   const [state, formAction, isPending] = useActionState(loginUser, null);
@@ -103,16 +104,12 @@ export default function LoginPage() {
             </form>
 
             <div className="mt-6 pt-5 border-t border-slate-100 text-center space-y-3">
-              <p className="text-sm text-slate-500 font-medium">
-                Are you a mentor?{" "}
-                <Link href="/faculty/login" className="font-bold text-indigo-600 hover:text-indigo-800 transition-colors">
-                  Login as Faculty &rarr;
-                </Link>
-              </p>
-              <p className="text-sm text-slate-500 font-medium">
-                Institute Administrator?{" "}
-                <Link href="/admin/login" className="font-bold text-blue-600 hover:text-blue-800 transition-colors">
-                  Login as Admin &rarr;
+              <div className="mt-2">
+                <ForgotPasswordModal role="admin" />
+                </div>
+                <p className="text-sm text-slate-500 font-medium">
+                <Link href="/" className="font-bold text-indigo-600 hover:text-indigo-800 transition-colors">
+                  Back to Home Page &rarr;
                 </Link>
               </p>
             </div>
