@@ -136,7 +136,7 @@ export default async function FacultyProfilePage() {
             <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
               <p className="text-xs font-bold tracking-wider text-slate-500 uppercase mb-1">Department</p>
               <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-indigo-100 text-indigo-700">
-                {faculty.department || 'Not specified'}
+                {faculty.departmentName || 'Not specified'}
               </span>
             </div>
           </div>
