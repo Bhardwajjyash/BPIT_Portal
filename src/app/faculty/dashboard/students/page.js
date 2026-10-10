@@ -4,8 +4,9 @@ import { redirect } from "next/navigation";
 import { assignStudentToMentor, removeStudentFromMentor } from "@/app/actions";
 import { UserPlus, Search, UserMinus, ChevronDown } from "lucide-react";
 import ExportButton from "@/components/ExportButton";
+import ToastActionForm from "@/components/ToastActionForm"; // <-- Import the new wrapper
 
-// Helper to convert full department names to acronyms (e.g., "Information Technology" -> "IT")
+// Helper to convert full department names to acronyms
 const getShortDept = (name) => {
   if (!name) return 'Dept';
   if (name.includes('Data Science')) return 'CSE-DS';
@@ -38,7 +39,7 @@ export default async function ManageStudentsPage({ searchParams }) {
     orderBy: { name: 'asc' }
   });
 
-  // 3. Fetch search result if query exists (now accepts 10 OR 11 digits)
+  // 3. Fetch search result if query exists
   let searchResult = null;
   if (searchQuery.length >= 10 && searchQuery.length <= 11) {
     searchResult = await prisma.student.findUnique({
@@ -76,7 +77,7 @@ export default async function ManageStudentsPage({ searchParams }) {
         </div>
         <p className="text-sm text-slate-600 mb-6">Enter a 10 or 11-digit enrollment number to search the database directly.</p>
         
-        {/* Search Form */}
+        {/* Search Form (No toast needed for GET search) */}
         <form className="flex flex-col sm:flex-row gap-3 mb-6" method="GET">
           <div className="relative flex-1">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
@@ -86,7 +87,6 @@ export default async function ManageStudentsPage({ searchParams }) {
               defaultValue={searchQuery}
               pattern="[0-9]{10,11}"
               placeholder="e.g. 08220803123" 
-              // 🔧 FIX: Added text-slate-900 so typed text is dark and visible
               className="text-slate-900 placeholder:text-slate-400 w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-indigo-500 outline-none transition-all text-sm font-medium"
             />
           </div>
@@ -107,12 +107,16 @@ export default async function ManageStudentsPage({ searchParams }) {
                 {searchResult.mentorId === facultyId ? (
                   <span className="text-xs font-bold text-emerald-600 bg-emerald-100 px-3 py-1.5 rounded-lg">Already Added</span>
                 ) : (
-                  <form action={assignStudentToMentor}>
+                  <ToastActionForm 
+                    action={assignStudentToMentor}
+                    loadingMessage="Assigning student..."
+                    successMessage="Student added to your mentees!"
+                  >
                     <input type="hidden" name="enrollmentNo" value={searchResult.enrollmentNo} />
                     <button type="submit" className="px-4 py-2 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors">
                       Add Mentee
                     </button>
-                  </form>
+                  </ToastActionForm>
                 )}
               </>
             ) : (
@@ -137,16 +141,17 @@ export default async function ManageStudentsPage({ searchParams }) {
                 </div>
                 
                 <div className="flex items-center gap-2 shrink-0">
-                  <ExportButton 
-                    studentId={student.id} 
-                    label="Export" 
-                  />
-                  <form action={removeStudentFromMentor}>
+                  <ExportButton studentId={student.id} label="Export" />
+                  <ToastActionForm 
+                    action={removeStudentFromMentor}
+                    loadingMessage="Removing..."
+                    successMessage="Student removed successfully!"
+                  >
                     <input type="hidden" name="studentId" value={student.id} />
                     <button type="submit" className="p-2.5 text-rose-500 hover:bg-rose-100 rounded-xl transition-colors border border-transparent hover:border-rose-200" title="Remove Student">
                       <UserMinus className="w-4 h-4" />
                     </button>
-                  </form>
+                  </ToastActionForm>
                 </div>
               </div>
             ))}
@@ -161,10 +166,7 @@ export default async function ManageStudentsPage({ searchParams }) {
         
         <div className="space-y-3">
           {Object.keys(groupedStudents).map(section => (
-            <details 
-              key={section} 
-              className="group border border-slate-200 rounded-xl bg-slate-50 overflow-hidden open:bg-white open:shadow-sm transition-all"
-            >
+            <details key={section} className="group border border-slate-200 rounded-xl bg-slate-50 overflow-hidden open:bg-white open:shadow-sm transition-all">
               <summary className="p-4 font-bold text-slate-800 cursor-pointer flex justify-between items-center hover:bg-slate-100 group-open:bg-indigo-50 group-open:text-indigo-800 transition-colors list-none [&::-webkit-details-marker]:hidden">
                 <div className="flex items-center gap-2">
                   <ChevronDown className="w-4 h-4 text-slate-400 group-open:-rotate-180 transition-transform duration-200" />
@@ -195,12 +197,16 @@ export default async function ManageStudentsPage({ searchParams }) {
                             Taken
                           </span>
                         ) : (
-                          <form action={assignStudentToMentor}>
+                          <ToastActionForm 
+                            action={assignStudentToMentor}
+                            loadingMessage="Adding..."
+                            successMessage="Added!"
+                          >
                             <input type="hidden" name="enrollmentNo" value={student.enrollmentNo} />
                             <button type="submit" className="text-[10px] uppercase tracking-wider font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-600 hover:text-white border border-indigo-200 hover:border-indigo-600 px-3 py-1.5 rounded-md transition-colors">
                               Add
                             </button>
-                          </form>
+                          </ToastActionForm>
                         )}
                       </div>
                     </div>

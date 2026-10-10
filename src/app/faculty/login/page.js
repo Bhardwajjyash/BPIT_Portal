@@ -1,14 +1,22 @@
 "use client";
-import { useActionState, useState } from "react";
+import { useActionState, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { loginFaculty } from "@/app/actions";
-import { AlertCircle, Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 import ForgotPasswordModal from "@/components/ForgotPasswordModal";
+import toast from "react-hot-toast";
 
 export default function FacultyLoginPage() {
   const [state, formAction, isPending] = useActionState(loginFaculty, null);
-  const [showPassword, setShowPassword] = useState(false); // ✅ Added state for password
+  const [showPassword, setShowPassword] = useState(false);
+
+  // Watch for state changes from your Server Action
+  useEffect(() => {
+    if (state?.error) {
+      toast.error(state.error); // Trigger Error Toast
+    }
+  }, [state]);
 
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center p-4 sm:p-6 lg:p-8 bg-slate-50 overflow-hidden">
@@ -42,13 +50,6 @@ export default function FacultyLoginPage() {
               <p className="text-slate-500 text-sm font-medium mt-1">Review and verify student achievements</p>
             </div>
             
-            {state?.error && (
-              <div className="mb-6 p-3 bg-rose-50 border border-rose-200 text-rose-700 text-sm font-bold rounded-xl flex items-center gap-2 shadow-sm animate-in fade-in slide-in-from-top-2">
-                <AlertCircle className="w-5 h-5 shrink-0" />
-                {state.error}
-              </div>
-            )}
-            
             <form action={formAction} className="space-y-5">
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
@@ -67,7 +68,6 @@ export default function FacultyLoginPage() {
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                   Password
                 </label>
-                {/* ✅ Added relative wrapper and toggle button */}
                 <div className="relative">
                   <input 
                     type={showPassword ? "text" : "password"} 
@@ -96,17 +96,16 @@ export default function FacultyLoginPage() {
               </button>
             </form>
 
-            
-              <div className="mt-6 pt-5 border-t border-slate-100 text-center space-y-3">
+            <div className="mt-6 pt-5 border-t border-slate-100 text-center space-y-3">
               <div className="mt-2">
-                <ForgotPasswordModal role="admin" />
-                </div>
-                <p className="text-sm text-slate-500 font-medium">
+                {/* 🔧 FIX: Corrected role from "admin" to "faculty" */}
+                <ForgotPasswordModal role="faculty" />
+              </div>
+              <p className="text-sm text-slate-500 font-medium">
                 <Link href="/" className="font-bold text-indigo-600 hover:text-indigo-800 transition-colors">
                   Back to Home Page &rarr;
                 </Link>
               </p>
-            
             </div>
           </div>
         </div>

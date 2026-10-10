@@ -1,9 +1,9 @@
 import { prisma } from "@/lib/db";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { updateAchievementStatus } from "@/app/actions";
 import { ClipboardList, CheckCircle, XCircle, Eye, X, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import ReviewActionForm from "@/components/ReviewActionForm"; // <-- Import the new wrapper
 
 export default async function PendingRequestsPage({ searchParams }) {
   const cookieStore = await cookies();
@@ -88,7 +88,7 @@ export default async function PendingRequestsPage({ searchParams }) {
 
   // Helper function for rendering detail rows
   const DetailRow = ({ label, value, isLink }) => {
-    if (!value) return null; // Hide the row entirely if the student didn't provide this optional info
+    if (!value) return null;
     return (
       <div className="bg-slate-50 p-3 rounded-xl border border-slate-100">
         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">{label}</p>
@@ -144,7 +144,7 @@ export default async function PendingRequestsPage({ searchParams }) {
                     View
                   </Link>
                   
-                  <form action={updateAchievementStatus}>
+                  <ReviewActionForm className="flex">
                     <input type="hidden" name="id" value={req.id} />
                     <input type="hidden" name="category" value={req.category} />
                     <input type="hidden" name="status" value="APPROVED" />
@@ -152,10 +152,9 @@ export default async function PendingRequestsPage({ searchParams }) {
                       <CheckCircle className="w-4 h-4" />
                       Approve
                     </button>
-                  </form>
+                  </ReviewActionForm>
                   
-                  {/* Updated Reject Form with Remarks Input */}
-                  <form action={updateAchievementStatus} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full xl:w-auto">
+                  <ReviewActionForm className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full xl:w-auto">
                     <input type="hidden" name="id" value={req.id} />
                     <input type="hidden" name="category" value={req.category} />
                     <input type="hidden" name="status" value="REJECTED" />
@@ -170,7 +169,7 @@ export default async function PendingRequestsPage({ searchParams }) {
                       <XCircle className="w-4 h-4" />
                       Reject
                     </button>
-                  </form>
+                  </ReviewActionForm>
                 </div>
               </div>
             ))}
@@ -284,7 +283,6 @@ export default async function PendingRequestsPage({ searchParams }) {
                     value={selectedRequest.fullData.description || selectedRequest.fullData.learnings} 
                   />
                   
-                  {/* Show second long-form field if the model has both (e.g. projects have both description and learnings) */}
                   {selectedRequest.category === 'project' && selectedRequest.fullData.learnings && (
                      <DetailRow label="Key Learnings" value={selectedRequest.fullData.learnings} />
                   )}
@@ -308,8 +306,7 @@ export default async function PendingRequestsPage({ searchParams }) {
               </Link>
               
               <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
-                {/* Updated Reject Form for Modal */}
-                <form action={updateAchievementStatus} className="flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
+                <ReviewActionForm className="flex flex-col sm:flex-row items-center gap-2 w-full sm:w-auto">
                   <input type="hidden" name="id" value={selectedRequest.id} />
                   <input type="hidden" name="category" value={selectedRequest.category} />
                   <input type="hidden" name="status" value="REJECTED" />
@@ -323,16 +320,16 @@ export default async function PendingRequestsPage({ searchParams }) {
                   <button type="submit" className="w-full sm:w-auto px-6 py-2.5 text-sm font-bold text-rose-700 bg-rose-100 hover:bg-rose-200 rounded-xl shadow-sm transition-colors whitespace-nowrap">
                     Reject
                   </button>
-                </form>
+                </ReviewActionForm>
                 
-                <form action={updateAchievementStatus} className="w-full sm:w-auto">
+                <ReviewActionForm className="w-full sm:w-auto">
                   <input type="hidden" name="id" value={selectedRequest.id} />
                   <input type="hidden" name="category" value={selectedRequest.category} />
                   <input type="hidden" name="status" value="APPROVED" />
                   <button type="submit" className="w-full sm:w-auto px-6 py-2.5 text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 rounded-xl shadow-sm transition-colors whitespace-nowrap">
                     Approve Request
                   </button>
-                </form>
+                </ReviewActionForm>
               </div>
             </div>
             

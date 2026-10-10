@@ -1083,6 +1083,7 @@ export async function processForgotPassword(prevState, formData) {
   }
 }
 // Add this at the bottom of src/app/actions.js
+// src/app/actions.js (Update the deleteMentor function)
 export async function deleteMentor(formData) {
   const cookieStore = await cookies();
   if (!cookieStore.get('adminId')?.value) return { success: false, error: "Unauthorized" };
@@ -1090,27 +1091,19 @@ export async function deleteMentor(formData) {
   const mentorId = formData.get('id');
 
   try {
-    // 1. Clear any verification logs tied to this faculty to prevent foreign key errors
-    await prisma.verifiedLog.deleteMany({
-      where: { facultyId: mentorId }
-    });
-
-    // 2. Unassign all students from this mentor (sets their mentorId back to null)
+    await prisma.verifiedLog.deleteMany({ where: { facultyId: mentorId } });
     await prisma.student.updateMany({
       where: { mentorId: mentorId },
       data: { mentorId: null }
     });
+    await prisma.faculty.delete({ where: { id: mentorId } });
 
-    // 3. Delete the faculty member
-    await prisma.faculty.delete({
-      where: { id: mentorId }
-    });
-
-    // Refresh the pages to reflect the changes immediately
     revalidatePath('/admin/dashboard/faculty');
     revalidatePath('/admin/dashboard/students');
     
+    return { success: true }; // <-- Added this return statement
   } catch (error) {
     console.error("Failed to delete mentor:", error);
+    return { success: false, error: "Database error occurred." }; // <-- Added error return
   }
 }

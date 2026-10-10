@@ -1,15 +1,23 @@
 "use client";
-import { useActionState, useRef } from "react";
+import { useActionState, useRef, useEffect } from "react";
 import { changePassword } from "@/app/actions";
-import { Lock, CheckCircle2, AlertCircle } from "lucide-react";
+import { Lock } from "lucide-react";
+import toast from "react-hot-toast";
 
 export default function ChangePasswordForm() {
   const [state, formAction, isPending] = useActionState(changePassword, null);
   const formRef = useRef(null);
 
-  if (state?.success) {
-    formRef.current?.reset();
-  }
+  // Watch for changes in the server action 'state'
+  useEffect(() => {
+    if (state?.success) {
+      toast.success(state.success); // Trigger Success Toast
+      formRef.current?.reset();     // Clear form
+    }
+    if (state?.error) {
+      toast.error(state.error);     // Trigger Error Toast
+    }
+  }, [state]);
 
   return (
     <div className="mt-8 pt-8 border-t border-slate-100">
@@ -40,9 +48,6 @@ export default function ChangePasswordForm() {
           <button type="submit" disabled={isPending} className="px-6 py-2.5 bg-slate-900 text-white text-sm font-bold rounded-xl hover:bg-slate-800 transition-colors disabled:opacity-70">
             {isPending ? "Updating..." : "Update Password"}
           </button>
-          
-          {state?.error && <span className="text-rose-600 text-sm font-bold flex items-center gap-1"><AlertCircle className="w-4 h-4"/> {state.error}</span>}
-          {state?.success && <span className="text-emerald-600 text-sm font-bold flex items-center gap-1"><CheckCircle2 className="w-4 h-4"/> {state.success}</span>}
         </div>
       </form>
     </div>

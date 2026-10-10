@@ -1,8 +1,8 @@
 import { prisma } from "@/lib/db";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { updateAchievementStatus } from "@/app/actions";
 import { ClipboardCheck, CheckCircle, XCircle } from "lucide-react";
+import ReviewActionForm from "@/components/ReviewActionForm"; // <-- Import the new wrapper
 
 export default async function GlobalRequestsPage() {
   const cookieStore = await cookies();
@@ -71,16 +71,16 @@ export default async function GlobalRequestsPage() {
 
               {/* Action Buttons (Approve / Reject with Remarks) */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full xl:w-auto border-t xl:border-t-0 border-slate-100 pt-4 xl:pt-0 mt-2 xl:mt-0">
-                <form action={updateAchievementStatus} className="flex">
+                <ReviewActionForm className="flex">
                   <input type="hidden" name="id" value={req.id} />
                   <input type="hidden" name="category" value={req.category} />
                   <input type="hidden" name="status" value="APPROVED" />
                   <button type="submit" className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-4 py-2 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200 font-bold text-sm rounded-xl transition-colors">
                     <CheckCircle className="w-4 h-4" /> Approve
                   </button>
-                </form>
+                </ReviewActionForm>
 
-                <form action={updateAchievementStatus} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full xl:w-auto">
+                <ReviewActionForm className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full xl:w-auto">
                   <input type="hidden" name="id" value={req.id} />
                   <input type="hidden" name="category" value={req.category} />
                   <input type="hidden" name="status" value="REJECTED" />
@@ -96,7 +96,7 @@ export default async function GlobalRequestsPage() {
                   <button type="submit" className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-4 py-2 bg-rose-50 text-rose-700 hover:bg-rose-100 border border-rose-200 font-bold text-sm rounded-xl transition-colors">
                     <XCircle className="w-4 h-4" /> Reject
                   </button>
-                </form>
+                </ReviewActionForm>
               </div>
 
             </div>
