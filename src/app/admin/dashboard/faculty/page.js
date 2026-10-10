@@ -14,6 +14,7 @@ import {
   XCircle 
 } from "lucide-react";
 import BulkUploadModal from "@/components/BulkUploadModal";
+import { deleteMentor } from "@/app/actions"; // Add this to your imports
 
 export default async function ManageMentorsPage() {
   const cookieStore = await cookies();
@@ -138,9 +139,13 @@ export default async function ManageMentorsPage() {
                   </div>
                   
                   {/* Delete Button */}
-                  <button className="text-slate-400 hover:text-rose-600 transition-colors p-1" title="Remove Mentor">
-                    <Trash2 className="w-5 h-5" />
-                  </button>
+                  {/* Delete Button */}
+<form action={deleteMentor}>
+  <input type="hidden" name="id" value={mentor.id} />
+  <button type="submit" className="text-slate-400 hover:text-rose-600 transition-colors p-1" title="Remove Mentor">
+    <Trash2 className="w-5 h-5" />
+  </button>
+</form>
                 </div>
 
                 <div className="space-y-2 mb-4">
